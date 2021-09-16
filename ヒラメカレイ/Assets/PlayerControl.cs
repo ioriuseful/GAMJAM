@@ -35,6 +35,14 @@ public class PlayerControl : MonoBehaviour
         {
             velocity.x = 0.1f;
         }
+        if(Input.GetKey(KeyCode.UpArrow))
+        {
+            velocity.y = 0.1f;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            velocity.y = -0.1f;
+        }
         transform.position += velocity;
     }
     void Damage(float damage)
