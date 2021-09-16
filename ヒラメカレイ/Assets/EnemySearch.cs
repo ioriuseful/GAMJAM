@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySearch : MonoBehaviour
 {
     bool searchFlag;
+    GameObject target;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,18 +17,29 @@ public class EnemySearch : MonoBehaviour
     {
         
     }
-    private void OnCollisionStay(Collision collision)
+   
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.transform.tag == "Player")
+        if (other.transform.tag == "Player") 
         {
             searchFlag = true;
+            target = other.gameObject;
         }
     }
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.transform.tag == "Player")
         {
             searchFlag = false;
+            target = null;
         }
+    }
+    public bool GetSearchFlag()
+    {
+        return searchFlag;
+    }
+    public GameObject GetTarget()
+    {
+        return target;
     }
 }
