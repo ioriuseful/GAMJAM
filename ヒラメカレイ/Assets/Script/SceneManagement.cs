@@ -10,8 +10,8 @@ public class SceneManagement : MonoBehaviour
     private string sceneName = "";
     //private bool clearFlag = false;
 
-    //public GameObject fade;
-    //private bool oneFadeFlag = false;
+    public GameObject fade;
+    private bool oneFadeFlag = false;
 
     public enum SceneNames
     {
@@ -24,19 +24,20 @@ public class SceneManagement : MonoBehaviour
     
     void Start()
     {
+        Application.targetFrameRate = 60;
         sceneName = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (!oneFadeFlag && fade != null)
-        //{
-        //    //fade.GetComponent<FadeStart>().FadeInA();
-        //    //oneFadeFlag = true;
-        //}
+        if (!oneFadeFlag && fade != null)
+        {
+            fade.GetComponent<FadeStart>().FadeInA();
+            oneFadeFlag = true;
+        }
 
-        if(sceneName == SceneNames.TitleScene.ToString())
+        if (sceneName == SceneNames.TitleScene.ToString())
         {
             //Debug.Log("タイトルだよ");
         }
@@ -56,12 +57,14 @@ public class SceneManagement : MonoBehaviour
 
     public void OnClickTitle()
     {
-        SceneManager.LoadScene(SceneNames.TitleScene.ToString());
+        //SceneManager.LoadScene(SceneNames.TitleScene.ToString());
+        fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.TitleScene.ToString());
     }
 
     public void OnClickGameScene()
     {
-        SceneManager.LoadScene(SceneNames.GameScene.ToString());
+        //SceneManager.LoadScene(SceneNames.GameScene.ToString());
+        fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameScene.ToString());
     }
 
     public void OnClickEnd()
