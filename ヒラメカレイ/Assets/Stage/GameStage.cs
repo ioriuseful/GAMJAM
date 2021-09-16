@@ -13,12 +13,20 @@ public class GameStage : MonoBehaviour
     public int aheadStage;
     public List<GameObject> StageList = new List<GameObject>();
 
+    /// <summary>
+    /// 下三つ実験用クリアステージ作成
+    /// </summary>
+    public float ClearFrag = 20;
+    public float ClearCount = 0;
+    public GameObject goalStage;
+
 
     // Start is called before the first frame update
     void Start()
     {
         StageIndex = FirstStageIndex - 1;
         StageManager(aheadStage);
+        ClearCount = 0;
     }
 
     // Update is called once per frame
@@ -30,7 +38,9 @@ public class GameStage : MonoBehaviour
 
         {
             StageManager(targetPosIndex + aheadStage);
+           
         }
+       
     }
 
     void StageManager(int maps)
@@ -42,8 +52,10 @@ public class GameStage : MonoBehaviour
 
         for(int i=StageIndex+1;i<maps;i++)//指定したステージまで作成する
         {
-            GameObject stage = MakeStage(i);
-            StageList.Add(stage);
+            
+                GameObject stage = MakeStage(i);
+                StageList.Add(stage);
+                
         }
 
         while(StageList.Count > aheadStage+1)//古いステージを削除する
@@ -57,8 +69,18 @@ public class GameStage : MonoBehaviour
     GameObject MakeStage(int index)
     {
         int nextStage = Random.Range(0, stagenum.Length);
-
-        GameObject stageObject = (GameObject)Instantiate(stagenum[nextStage], new Vector3(0, 0, index * StageSize), Quaternion.identity);
+        GameObject stageObject;
+        if (ClearCount > ClearFrag)
+        {
+            stageObject = (GameObject)Instantiate(stagenum[nextStage], new Vector3(index * StageSize, 0, 0), Quaternion.identity);
+            ClearCount++;
+            Debug.Log(ClearFrag);
+            Debug.Log(ClearCount);
+        }
+        else
+        {
+            stageObject = (GameObject)Instantiate(goalStage, new Vector3(index * StageSize, 0, 0), Quaternion.identity);
+        }
 
         return stageObject;
     }
