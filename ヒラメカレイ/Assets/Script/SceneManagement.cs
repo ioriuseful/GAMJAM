@@ -12,6 +12,8 @@ public class SceneManagement : MonoBehaviour
 
     public GameObject fade;
     private bool oneFadeFlag = false;
+    private GameObject gameManager;
+    private Data data;
 
     public enum SceneNames
     {
@@ -26,6 +28,12 @@ public class SceneManagement : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         sceneName = SceneManager.GetActiveScene().name;
+
+        if(sceneName == SceneNames.GameScene.ToString())
+        {
+            gameManager = GameObject.Find("DataOBJ");
+            data = gameManager.GetComponent<Data>();
+        }
     }
 
     // Update is called once per frame
@@ -43,15 +51,28 @@ public class SceneManagement : MonoBehaviour
         }
         else if (sceneName == SceneNames.GameScene.ToString())
         {
-
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.ClearScene.ToString());
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) || data.GetIsDeadFlag())
+            {
+                fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString());
+            }
         }
         else if (sceneName == SceneNames.ClearScene.ToString())
         {
-
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.TitleScene.ToString());
+            }
         }
         else if (sceneName == SceneNames.GameOverScene.ToString())
         {
-
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.TitleScene.ToString());
+            }
         }
     }
 
