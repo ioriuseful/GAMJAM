@@ -173,7 +173,7 @@ MonoBehaviour:
   aheadStage: 11
   StageList:
   - {fileID: 6772325853474987093, guid: f0752803537a01d469d9f1d7328eb4ed, type: 3}
-  ClearFrag: 0
+  ClearFrag: 15
   ClearCount: 10
   goalStage: {fileID: 7440377655621689675, guid: c35f5424cb197b045a04a2da8fdeb49f,
     type: 3}
