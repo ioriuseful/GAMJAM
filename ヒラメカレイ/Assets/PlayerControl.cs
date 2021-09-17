@@ -8,6 +8,10 @@ public class PlayerControl : MonoBehaviour
     float hp;
     bool deadFlag;
     bool air;
+
+    private GameObject gameManager;
+    private Data data;
+
     enum Direct
     {
         Flont,Back,
@@ -20,6 +24,10 @@ public class PlayerControl : MonoBehaviour
         hp = 10;
         deadFlag = false;
         air = true;
+
+        gameManager = GameObject.Find("DataOBJ");
+        data = gameManager.GetComponent<Data>();
+
     }
 
     // Update is called once per frame
@@ -27,6 +35,12 @@ public class PlayerControl : MonoBehaviour
     {
         Move();
         CheckDead();
+
+        //---------------------------
+        bool flag = data.GetStageChange();//取得falseが表カレイ.trueがヒラメ
+        Debug.Log(flag);
+        //---------------------------
+
     }
     private void OnTriggerStay(Collider other)
     {
