@@ -31,15 +31,12 @@ public class GameStage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int targetPosIndex = (int)(Target.position.z / StageSize);
+        int targetPosIndex = (int)(Target.position.x / StageSize);
 
         if (targetPosIndex + aheadStage > StageIndex)
-
         {
             StageManager(targetPosIndex + aheadStage);
-           
         }
-       
     }
 
     void StageManager(int maps)
@@ -49,7 +46,7 @@ public class GameStage : MonoBehaviour
             return;
         }
 
-        for(int i=StageIndex+1;i<maps;i++)//指定したステージまで作成する
+        for(int i=StageIndex+1;i<=maps;i++)//指定したステージまで作成する
         {
             
                 GameObject stage = MakeStage(i);
