@@ -14,20 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    x: -124.8
-    y: 121.6
-    width: 1521.6
-    height: 806.4
-  m_ShowMode: 4
-  m_Title: 
-  m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
-=======
-<<<<<<< HEAD
->>>>>>> origin/ヤマナカの作業場
     x: 7.2000003
     y: 50.4
     width: 1521.6
@@ -35,21 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
-<<<<<<< HEAD
-=======
-=======
-    x: 0
-    y: 43.2
-    width: 1536
-    height: 780.8
-  m_ShowMode: 4
-  m_Title: 
-  m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 471}
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -60,61 +32,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 3}
-  - {fileID: 5}
-  - {fileID: 4}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1536
-    height: 781
-  m_MinSize: {x: 875, y: 471}
-  m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1536
-    height: 30
-  m_MinSize: {x: 0, y: 0}
-  m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: 
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_EditorHideFlags: 1
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -127,36 +44,12 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1522
-<<<<<<< HEAD
-    height: 757
-  m_MinSize: {x: 678, y: 342}
-  m_MaxSize: {x: 12003, y: 8042}
-  vertical: 0
-  controlID: 80
---- !u!114 &3
-=======
     height: 717
   m_MinSize: {x: 680, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
-  controlID: 60
+  controlID: 34
 --- !u!114 &3
-<<<<<<< HEAD
-=======
-=======
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 761
-    width: 1536
-    height: 20
-  m_MinSize: {x: 0, y: 0}
-  m_MaxSize: {x: 0, y: 0}
---- !u!114 &5
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,30 +64,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 1213
-=======
-<<<<<<< HEAD
-    x: 1048
-    y: 0
-    width: 474
-    height: 757
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-=======
-    x: 1214
->>>>>>> origin/ヤマナカの作業場
     y: 0
     width: 309
     height: 717
-<<<<<<< HEAD
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-=======
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -217,20 +92,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 344
-    height: 459
-=======
     width: 300
     height: 434
-<<<<<<< HEAD
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-=======
->>>>>>> origin/sugahara
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
->>>>>>> origin/ヤマナカの作業場
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -246,32 +111,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 459
-    width: 1048
-    height: 298
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
-=======
     y: 434
     width: 1213
     height: 283
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 13}
->>>>>>> origin/sugahara
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -292,13 +148,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
     width: 1522
     height: 767
   m_MinSize: {x: 875, y: 300}
@@ -320,13 +169,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
     width: 1522
     height: 30
   m_MinSize: {x: 0, y: 0}
@@ -343,31 +185,10 @@ MonoBehaviour:
   m_EditorHideFlags: 1
   m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-=======
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
     x: 0
     y: 747
     width: 1522
@@ -398,23 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-<<<<<<< HEAD
-  controlID: 61
-=======
-  controlID: 84
-=======
-    width: 821
-    height: 731
-  m_MinSize: {x: 202, y: 421}
-  m_MaxSize: {x: 4002, y: 8021}
-  vertical: 1
-<<<<<<< HEAD
-  controlID: 81
-=======
-  controlID: 9773
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
+  controlID: 35
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -424,10 +229,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-=======
-<<<<<<< HEAD
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -443,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 35
+  controlID: 36
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -452,77 +253,17 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-<<<<<<< HEAD
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: SceneView
-=======
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
->>>>>>> origin/sugahara
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
-<<<<<<< HEAD
-    y: 0
-    width: 1048
-    height: 459
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
-  vertical: 0
-  controlID: 36
---- !u!114 &11
-=======
-    y: 369
-    width: 821
-    height: 362
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
-  m_Panes:
-  - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &12
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
-  m_Name: SceneView
-=======
-  m_Name: InspectorWindow
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    x: 344
-    y: 0
-    width: 704
-    height: 459
-=======
-<<<<<<< HEAD
->>>>>>> origin/ヤマナカの作業場
     x: 300
     y: 0
     width: 913
     height: 434
->>>>>>> origin/sugahara
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -541,13 +282,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -586,24 +320,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 7.2000003
     y: 514.4
     width: 1212
     height: 262
-=======
-<<<<<<< HEAD
-    x: 23.2
-    y: 539.2
-    width: 1047
-    height: 277
-=======
-    x: 203.2
-    y: 73.6
-    width: 231
-    height: 710
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -618,15 +338,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
     - Assets/Scenes
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/sugahara
-    - Assets
->>>>>>> origin/ヤマナカの作業場
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
@@ -637,43 +349,25 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-    m_SelectedIDs: c4370000
-    m_LastClickedID: 14276
-    m_ExpandedIDs: 00000000b8370000ba37000000ca9a3b
-=======
-<<<<<<< HEAD
-    m_SelectedIDs: 20350000
-    m_LastClickedID: 13600
-    m_ExpandedIDs: 000000002035000000ca9a3b
-=======
-<<<<<<< HEAD
-    m_SelectedIDs: 8e340000
-    m_LastClickedID: 13454
-    m_ExpandedIDs: 000000008e34000000ca9a3b
-=======
-    m_SelectedIDs: e4350000
-    m_LastClickedID: 13796
-    m_ExpandedIDs: 00000000d4350000d635000000ca9a3b
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
+    m_SelectedIDs: aa350000
+    m_LastClickedID: 13738
+    m_ExpandedIDs: 000000009e350000a035000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Resources
+      m_OriginalName: Resources
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 13736
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -685,19 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000b8370000ba370000
-=======
-<<<<<<< HEAD
-    m_ExpandedIDs: 0000000020350000
-=======
-<<<<<<< HEAD
-    m_ExpandedIDs: 000000008e340000
-=======
-    m_ExpandedIDs: 00000000d4350000d635000000ca9a3b
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
+    m_ExpandedIDs: 000000009e350000a0350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -725,19 +407,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-<<<<<<< HEAD
     m_ExpandedInstanceIDs: c6230000
-=======
-<<<<<<< HEAD
-    m_ExpandedInstanceIDs: c6230000
-=======
-<<<<<<< HEAD
-    m_ExpandedInstanceIDs: c623000000000000
-=======
-    m_ExpandedInstanceIDs: 404100001c3200009233000078350000d2350000ce6600009c3a00004c3e0000ee540000000000000e36000040d30100ca340000
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -786,21 +456,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 1220
-=======
-<<<<<<< HEAD
-    x: 1049
-    y: 19
-    width: 472
-    height: 736
-=======
-    x: 1221.6
->>>>>>> origin/ヤマナカの作業場
     y: 80.8
     width: 307
     height: 696
->>>>>>> origin/sugahara
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -835,36 +494,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: -124.8
-    y: 152
-    width: 343
-    height: 438
-=======
     x: 7.2000003
     y: 80.8
     width: 299
     height: 413
->>>>>>> origin/sugahara
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: d6f6ffffaef7ffff
-=======
-<<<<<<< HEAD
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 5ef7ffff6cf7ffff7cf7ffff54f8ffff
-=======
-      m_SelectedIDs: 24340000
-      m_LastClickedID: 13348
-      m_ExpandedIDs: 68fbffff54340000
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
+      m_SelectedIDs: 46f9ffff
+      m_LastClickedID: -1722
+      m_ExpandedIDs: a8faffff54fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -887,18 +527,7 @@ MonoBehaviour:
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-<<<<<<< HEAD
-  m_WindowGUID: 140b46a516a78dc41b9fb9f4e972c690
-=======
-<<<<<<< HEAD
-  m_WindowGUID: b857c6115c36a364b8875a4d12714f01
-=======
-  m_WindowGUID: b528363851875fb44835fa685d0d6142
-=======
-  m_DirectoriesAreaWidth: 111
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
+  m_WindowGUID: fea85a4c82db3af4eb722753b0cde955
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -920,42 +549,14 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    x: 345
-    y: 19
-    width: 702
-    height: 438
-  m_ViewDataDictionary: {fileID: 0}
-  m_ShowContextualTools: 0
-  m_WindowGUID: 750511c21c7e4ea4594870e4db87ca63
-  m_Gizmos: 1
-=======
-<<<<<<< HEAD
->>>>>>> origin/ヤマナカの作業場
     x: 307.2
     y: 80.8
     width: 911
     height: 413
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
-  m_WindowGUID: f755945f5f79c0b49a4d87c58ba24e4e
+  m_WindowGUID: 0ef0de9fc9b6c2d49b28120a2016a9a7
   m_Gizmos: 1
-<<<<<<< HEAD
-=======
-=======
-    x: 436
-    y: 73.6
-    width: 819
-    height: 348
-  m_ViewDataDictionary: {fileID: 0}
-  m_ShowContextualTools: 0
-  m_WindowGUID: 153c09d92ebafc647a7636cc60320acf
-  m_Gizmos: 0
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
@@ -963,27 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0}
-=======
-<<<<<<< HEAD
-    m_Target: {x: 68.14514, y: 32.902702, z: 22.873768}
-    speed: 2
-    m_Value: {x: 68.14514, y: 32.902702, z: 22.873768}
-=======
-<<<<<<< HEAD
-    m_Target: {x: 0, y: 0, z: 0}
-    speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
-=======
-    m_Target: {x: 0, y: 0, z: 8}
-    speed: 2
-    m_Value: {x: 0, y: 0, z: 8}
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1029,7 +612,6 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-<<<<<<< HEAD
     m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
@@ -1037,30 +619,6 @@ MonoBehaviour:
     m_Target: 10
     speed: 2
     m_Value: 10
-=======
-    m_Target: {x: 0.0023024434, y: 0.9147764, z: -0.40392458, w: 0.005214666}
-    speed: 2
-    m_Value: {x: 0.0023024394, y: 0.91477484, z: -0.4039239, w: 0.005214657}
-  m_Size:
-<<<<<<< HEAD
-    m_Target: 39.017323
-    speed: 2
-    m_Value: 39.017323
-=======
-    m_Target: 10.734754
-    speed: 2
-    m_Value: 10.734754
-=======
-    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-    speed: 2
-    m_Value: {x: -0.7071068, y: 0, z: -0, w: -0.7071068}
-  m_Size:
-    m_Target: 60.781002
-    speed: 2
-    m_Value: 60.781002
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1106,21 +664,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    x: 426.4
-    y: 143.2
-    width: 702
-    height: 438
-=======
-<<<<<<< HEAD
->>>>>>> origin/ヤマナカの作業場
     x: 307.2
     y: 80.8
     width: 911
     height: 413
->>>>>>> origin/sugahara
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1130,15 +677,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-<<<<<<< HEAD
   m_TargetSize: {x: 911, y: 392}
-=======
-<<<<<<< HEAD
-  m_TargetSize: {x: 702, y: 417}
-=======
-  m_TargetSize: {x: 912, y: 392}
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1153,22 +692,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-<<<<<<< HEAD
     m_HBaseRangeMin: -364.4
     m_HBaseRangeMax: 364.4
-=======
-<<<<<<< HEAD
-    m_HBaseRangeMin: -280.80002
-    m_HBaseRangeMax: 280.80002
-    m_VBaseRangeMin: -166.8
-    m_VBaseRangeMax: 166.8
-=======
-    m_HBaseRangeMin: -364.80002
-    m_HBaseRangeMax: 364.80002
->>>>>>> origin/ヤマナカの作業場
     m_VBaseRangeMin: -156.8
     m_VBaseRangeMax: 156.8
->>>>>>> origin/sugahara
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1186,77 +713,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-<<<<<<< HEAD
       width: 911
       height: 392
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 455.5, y: 196}
-=======
-<<<<<<< HEAD
-      width: 702
-      height: 417
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 351, y: 208.5}
-=======
-      width: 912
-      height: 392
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 456, y: 196}
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
       x: -455.5
-=======
-<<<<<<< HEAD
-      x: -351
-      y: -208.5
-      width: 702
-      height: 417
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 877.5, y: 547.5}
-=======
-      x: -456
->>>>>>> origin/ヤマナカの作業場
       y: -196
       width: 911
       height: 392
     m_MinimalGUI: 1
   m_defaultScale: 1
-<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1138.75, y: 516.25}
-=======
-  m_LastWindowPixelSize: {x: 1140, y: 516.25}
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &18
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-    x: 346.4
-    y: 73.6
-    width: 709
-    height: 404
-  m_ViewDataDictionary: {fileID: 0}
-  m_LockTracker:
-    m_IsLocked: 0
-  m_LastSelectedObjectID: -2920
---- !u!114 &18
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1277,133 +756,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-=======
-    x: 320
-    y: 73.6
-    width: 733
-    height: 435
+    x: 8
+    y: 718
+    width: 1366
+    height: 308
   m_ViewDataDictionary: {fileID: 0}
-  m_ViewTransforms:
-    m_KeySerializationHelper:
-    - {fileID: 519012217721623695, guid: 34b3e5d3979c6fe4886d7802c94aa9d3, type: 2}
-    m_ValueSerializationHelper:
-    - e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 34b3e5d3979c6fe4886d7802c94aa9d3,
-    type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: 519012217721623695, guid: 34b3e5d3979c6fe4886d7802c94aa9d3,
-      type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  stateMachineGraph: {fileID: 0}
-  stateMachineGraphGUI: {fileID: 0}
-  blendTreeGraph: {fileID: 0}
-  blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
-  m_MiniTool: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_CurrentEditor: 1
-  m_LayerEditor:
-    m_SelectedLayerIndex: 0
---- !u!114 &19
->>>>>>> origin/sugahara
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 400, y: 100}
-  m_MaxSize: {x: 2048, y: 2048}
-  m_TitleContent:
-    m_Text: Asset Store
-    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-<<<<<<< HEAD
-    x: -124.8
-    y: 610.4
-    width: 1047
-    height: 277
-  m_ViewDataDictionary: {fileID: 0}
-=======
-<<<<<<< HEAD
->>>>>>> origin/ヤマナカの作業場
-    x: 7.2000003
-    y: 514.4
-    width: 1212
-    height: 262
-  m_ViewDataDictionary: {fileID: 0}
-<<<<<<< HEAD
-=======
-=======
-    x: 200
-    y: 73.6
-    width: 858
-    height: 440
-  m_ViewDataDictionary: {fileID: 0}
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1256.8
-    y: 73.6
-    width: 278
-    height: 710
-  m_ViewDataDictionary: {fileID: 0}
-  m_OpenAddComponentMenu: 0
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewResizer:
-    m_CachedPref: 151
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
->>>>>>> origin/sugahara
->>>>>>> origin/sugahara
->>>>>>> origin/ヤマナカの作業場
