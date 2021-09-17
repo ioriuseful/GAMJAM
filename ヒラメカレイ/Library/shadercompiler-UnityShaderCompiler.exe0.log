@@ -1,8 +1,11 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: preprocess
   insize=2789 outsize=1776 ok=1
 Cmd: preprocess
   insize=3471 outsize=2224 ok=1
 Cmd: preprocess
   insize=2864 outsize=1773 ok=1
+=======
+>>>>>>> origin/sugahara

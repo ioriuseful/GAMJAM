@@ -6,7 +6,8 @@ public class PlayerControl : MonoBehaviour
 {
     Vector3 velocity;
     float hp;
-
+    bool deadFlag;
+    bool air;
     enum Direct
     {
         Flont,Back,
@@ -16,17 +17,40 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        hp = 10;
+        deadFlag = false;
+        air = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+        CheckDead();
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.transform.tag == "Net")
+        {
+            Damage(10);
+        }
+        if (other.transform.tag == "Floor")
+        {
+            air = false;
+            velocity.y = 0;
+        }
+    }
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.transform.tag == "Player")
+        {}
+        if (collision.transform.tag == "Floor")
+        {
+            air = true;
+        }
     }
     void Move()
     {
-        velocity = Vector3.zero;
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             velocity.x = -0.1f;
@@ -43,11 +67,42 @@ public class PlayerControl : MonoBehaviour
         {
             velocity.y = -0.1f;
         }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            velocity.y = 0.15f;
+        }
         transform.position += velocity;
+        velocity.x = 0;
+        if(air)
+        {
+            velocity.y -= 0.005f;
+            if (velocity.y < -0.05f)
+            {
+                velocity.y = -0.05f;
+            }
+        }
     }
     void Damage(float damage)
     {
         hp -= damage;
     }
-
+    void CheckDead()
+    {
+        if (hp >= 0)
+        { 
+            deadFlag = true;
+        }
+        else
+        {
+            deadFlag = false;
+        }
+    }
+    public bool GetDeadFlag()
+    {
+        return deadFlag;
+    }
+    public float GetHp()
+    {
+        return hp;
+    }
 }
