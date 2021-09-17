@@ -26,7 +26,6 @@ public class GameStage : MonoBehaviour
     {
         StageIndex = FirstStageIndex - 1;
         StageManager(aheadStage);
-        ClearCount = 0;
     }
 
     // Update is called once per frame
@@ -58,8 +57,13 @@ public class GameStage : MonoBehaviour
                 
         }
 
-        while(StageList.Count > aheadStage+1)//古いステージを削除する
+        while (StageList.Count > aheadStage + 1)//古いステージを削除する
         {
+            DestroyStage();
+        }
+        if(Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log("Hit");
             DestroyStage();
         }
 
@@ -72,14 +76,15 @@ public class GameStage : MonoBehaviour
         GameObject stageObject;
         if (ClearCount > ClearFrag)
         {
+            stageObject = (GameObject)Instantiate(goalStage, new Vector3(index * StageSize, 0, 0), Quaternion.identity);
+            
+        }
+        else
+        {
             stageObject = (GameObject)Instantiate(stagenum[nextStage], new Vector3(index * StageSize, 0, 0), Quaternion.identity);
             ClearCount++;
             Debug.Log(ClearFrag);
             Debug.Log(ClearCount);
-        }
-        else
-        {
-            stageObject = (GameObject)Instantiate(goalStage, new Vector3(index * StageSize, 0, 0), Quaternion.identity);
         }
 
         return stageObject;
