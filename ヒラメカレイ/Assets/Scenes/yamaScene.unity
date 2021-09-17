@@ -167,10 +167,16 @@ MonoBehaviour:
   Target: {fileID: 1058260744}
   stagenum:
   - {fileID: 6772325853474987093, guid: f0752803537a01d469d9f1d7328eb4ed, type: 3}
-  FirstStageIndex: 1
-  aheadStage: 3
+  - {fileID: 8040976336628180590, guid: ca4c432dbb20dc647830416ebba774d2, type: 3}
+  - {fileID: 7030455668983166652, guid: 492682a24548f854998d07a566b591ef, type: 3}
+  FirstStageIndex: 0
+  aheadStage: 11
   StageList:
   - {fileID: 6772325853474987093, guid: f0752803537a01d469d9f1d7328eb4ed, type: 3}
+  ClearFrag: 0
+  ClearCount: 10
+  goalStage: {fileID: 7440377655621689675, guid: c35f5424cb197b045a04a2da8fdeb49f,
+    type: 3}
 --- !u!1 &895786019
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,10 +438,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679902734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.16639608, y: -0, z: -0, w: 0.986059}
+  m_LocalPosition: {x: 0, y: 4, z: -3.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 19.157001, y: 0, z: 0}
