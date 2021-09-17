@@ -7,7 +7,7 @@ public class Data : MonoBehaviour
 
     private bool stageDirection = false;
 
-    private bool stageChange = false;
+    private bool stageChangeFlag = false;
 
     private bool clearFlag = false;
     private bool isDeadFlag = false;
@@ -18,8 +18,8 @@ public class Data : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerControl = player.GetComponent<PlayerControl>();
+        //player = GameObject.FindGameObjectWithTag("Player");
+        //playerControl = player.GetComponent<PlayerControl>();
     }
 
     // Update is called once per frame
@@ -36,6 +36,8 @@ public class Data : MonoBehaviour
         //{
         //    clearFlag = true;
         //}
+
+        Debug.Log(stageChangeFlag);
 
     }
 
@@ -56,7 +58,11 @@ public class Data : MonoBehaviour
 
     public bool GetStageChange()
     {
-        return stageChange;
+        return stageChangeFlag;
+    }
+    public void SetStageChangeFlag(bool fl)
+    {
+        stageChangeFlag = fl;
     }
 
     
