@@ -37,7 +37,7 @@ public class Data : MonoBehaviour
         //    clearFlag = true;
         //}
 
-        Debug.Log(stageChangeFlag);
+        //Debug.Log(stageChangeFlag);
 
     }
 
