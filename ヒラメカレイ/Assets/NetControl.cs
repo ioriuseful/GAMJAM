@@ -7,16 +7,25 @@ public class NetControl : MonoBehaviour
     Vector3 velocity;
     bool hitFlag;
     GameObject target;
+    private GameObject gameManager;
+    private Data data;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("DataOBJ");
+        data = gameManager.GetComponent<Data>();
+
         velocity = new Vector3(0, -0.05f, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (!data.GetStageMoveFlag())
+        {
+            Move();
+        }
     }
     void Move()
     {
