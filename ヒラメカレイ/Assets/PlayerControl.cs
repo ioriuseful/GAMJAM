@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //シーン遷移
 
 public class PlayerControl : MonoBehaviour
 {
@@ -56,6 +57,10 @@ public class PlayerControl : MonoBehaviour
         if (collision.transform.tag == "Floor")
         {
             air = true;
+        }
+        if(collision.transform.tag == "Goal")
+        {
+            SceneManager.LoadScene("ClearScene");
         }
     }
     void Move()

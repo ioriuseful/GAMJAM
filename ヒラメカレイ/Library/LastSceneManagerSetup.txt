@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/sugaharaScene.unity
-=======
 - path: Assets/Scenes/yamaScene.unity
->>>>>>> origin/ヤマナカの作業場
   isLoaded: 1
   isActive: 1
   isSubScene: 0
