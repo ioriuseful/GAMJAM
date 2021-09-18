@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     Vector3 velocity;
     float hp;
     bool deadFlag;
+    bool clearFlag;
     bool air;
     int score;
     private GameObject gameManager;
@@ -24,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     {
         hp = 10;
         deadFlag = false;
+        clearFlag = false;
         air = true;
         state = State.Hirame;
         gameManager = GameObject.Find("DataOBJ");
@@ -62,7 +64,7 @@ public class PlayerControl : MonoBehaviour
         }
         if(collision.transform.tag == "Goal")
         {
-            SceneManager.LoadScene("ClearScene");
+            clearFlag = true;
         }
     }
     void Move()
@@ -125,6 +127,11 @@ public class PlayerControl : MonoBehaviour
     public bool GetDeadFlag()
     {
         return deadFlag;
+    }
+
+    public bool GetClearFlag()
+    {
+        return clearFlag;
     }
     public float GetHp()
     {
