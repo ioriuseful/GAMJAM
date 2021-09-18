@@ -49,8 +49,8 @@ public class CameraMove : MonoBehaviour
 
         float playerPosX = player.transform.position.x;
         camaraTarget.transform.position = new Vector3(playerPosX, camaraTarget.transform.position.y, camaraTarget.transform.position.z);
-        vCamera.transform.position = new Vector3( camaraTarget.transform.position.x,vCamera.transform.position.y, vCamera.transform.position.z);
-        vCamera2.transform.position = new Vector3( camaraTarget.transform.position.x,vCamera2.transform.position.y, vCamera2.transform.position.z);
+        vCamera.transform.position = new Vector3( camaraTarget.transform.position.x, camaraTarget.transform.position.y, vCamera.transform.position.z);
+        vCamera2.transform.position = new Vector3( camaraTarget.transform.position.x, camaraTarget.transform.position.y, vCamera2.transform.position.z);
 
         //Debug.Log("----------" + data.GetStageMoveFlag());
 
