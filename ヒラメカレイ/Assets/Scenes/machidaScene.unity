@@ -590,6 +590,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
+=======
 --- !u!1 &704973535
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +726,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+>>>>>>> origin/sugahara
 --- !u!1 &765548229
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +819,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
+=======
 --- !u!1 &901516042 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3891687362272031501, guid: ccd53875cda44854093a9b844b646c5f,
@@ -1026,6 +1031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af6637d99b367845a5f4d191d43b04b, type: 3}
+>>>>>>> origin/sugahara
 --- !u!1 &1317124466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,13 +1612,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff1d9a24ceb43a4bb1e76de57c27b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+--- !u!1001 &7939578232900573222
+=======
 --- !u!1001 &2030301696
+>>>>>>> origin/sugahara
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
+    - target: {fileID: 7939578231833531097, guid: 8cb569cb217a9e94585d343e38f03369,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+=======
     - target: {fileID: 781407708689429802, guid: e8f1fa5e073c00a499d8589270bbf4ad,
         type: 3}
       propertyPath: fade
@@ -1639,46 +1672,78 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+>>>>>>> origin/sugahara
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+=======
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+>>>>>>> origin/sugahara
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+=======
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+>>>>>>> origin/sugahara
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+=======
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+>>>>>>> origin/sugahara
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+=======
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+>>>>>>> origin/sugahara
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+=======
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+>>>>>>> origin/sugahara
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+=======
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+>>>>>>> origin/sugahara
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 7939578231833531170, guid: 8cb569cb217a9e94585d343e38f03369,
+=======
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+>>>>>>> origin/sugahara
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+  m_SourcePrefab: {fileID: 100100000, guid: 8cb569cb217a9e94585d343e38f03369, type: 3}
+=======
   m_SourcePrefab: {fileID: 100100000, guid: e8f1fa5e073c00a499d8589270bbf4ad, type: 3}
 --- !u!1 &2075713363 stripped
 GameObject:
@@ -1686,3 +1751,4 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1633990738}
   m_PrefabAsset: {fileID: 0}
+>>>>>>> origin/sugahara

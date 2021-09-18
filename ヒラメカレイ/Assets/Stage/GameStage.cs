@@ -19,6 +19,7 @@ public class GameStage : MonoBehaviour
     public float ClearFrag = 20;
     public float ClearCount = 0;
     public GameObject goalStage;
+    public bool End = false;
 
 
     // Start is called before the first frame update
@@ -31,15 +32,12 @@ public class GameStage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int targetPosIndex = (int)(Target.position.z / StageSize);
+        int targetPosIndex = (int)(Target.position.x / StageSize);
 
         if (targetPosIndex + aheadStage > StageIndex)
-
         {
             StageManager(targetPosIndex + aheadStage);
-           
         }
-       
     }
 
     void StageManager(int maps)
@@ -49,10 +47,13 @@ public class GameStage : MonoBehaviour
             return;
         }
 
-        for(int i=StageIndex+1;i<maps;i++)//指定したステージまで作成する
+        for(int i=StageIndex+1;i<=maps;i++)//指定したステージまで作成する
         {
-            
-                GameObject stage = MakeStage(i);
+            if (End)
+            {
+                return;
+            }
+            GameObject stage = MakeStage(i);
                 StageList.Add(stage);
                 
         }
@@ -72,12 +73,13 @@ public class GameStage : MonoBehaviour
 
     GameObject MakeStage(int index)
     {
+  
         int nextStage = Random.Range(0, stagenum.Length);
         GameObject stageObject;
         if (ClearCount > ClearFrag)
         {
             stageObject = (GameObject)Instantiate(goalStage, new Vector3(index * StageSize, 0, 0), Quaternion.identity);
-            
+            End = true;
         }
         else
         {
