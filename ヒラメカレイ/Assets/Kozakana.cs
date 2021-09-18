@@ -8,10 +8,15 @@ public class Kozakana : MonoBehaviour
     public GameObject point1, point2;
     Vector3 nextPos;
     bool deadFlag;
+    private GameObject gameManager;
+    private Data data;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("DataOBJ");
+        data = gameManager.GetComponent<Data>();
+
         deadFlag = false;
         nextPos = point1.transform.position;
         velocity = Vector3.zero;
@@ -26,8 +31,11 @@ public class Kozakana : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        CheckDead();
+        if (!data.GetStageMoveFlag())
+        {
+            Move();
+            CheckDead();
+        }
     }
     private void Move()
     {
