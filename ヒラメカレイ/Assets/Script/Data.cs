@@ -15,27 +15,29 @@ public class Data : MonoBehaviour
     private GameObject player;
     private PlayerControl playerControl;
 
+    private bool stageMoveFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        //player = GameObject.FindGameObjectWithTag("Player");
-        //playerControl = player.GetComponent<PlayerControl>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerControl = player.GetComponent<PlayerControl>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //プレイヤーが死んでるかチェック
-        //if(isDeadFlag)//後でプレイヤーからもらう
-        //{
-        //    isDeadFlag = true;
-        //}
+        if (playerControl.GetDeadFlag())
+        {
+            isDeadFlag = true;
+        }
 
         //プレイヤーがゴールについたかチェック
-        //if(clearFlag))//後でプレイヤーからもらう
-        //{
-        //    clearFlag = true;
-        //}
+        if (clearFlag)//後でプレイヤーからもらう
+        {
+            clearFlag = true;
+        }
 
         //Debug.Log(stageChangeFlag);
 
@@ -47,15 +49,17 @@ public class Data : MonoBehaviour
         return isDeadFlag;
     }
 
-    /// <summary>
-    /// falseで右スクロール、trueで左スクロール
-    /// </summary>
-    /// <returns></returns>
+    
     public bool GetStageDire()
     {
         return stageDirection;
     }
 
+
+    /// <summary>
+    /// falseでカレイ、trueでヒラメ
+    /// </summary>
+    /// <returns></returns>
     public bool GetStageChange()
     {
         return stageChangeFlag;
@@ -63,6 +67,20 @@ public class Data : MonoBehaviour
     public void SetStageChangeFlag(bool fl)
     {
         stageChangeFlag = fl;
+    }
+
+    public void SetStageMoveFlag(bool fl)
+    {
+        stageMoveFlag = fl;
+    }
+
+    /// <summary>
+    /// ステージが回転しているときにtrue、止まってる時にfalse
+    /// </summary>
+    /// <returns></returns>
+    public bool GetStageMoveFlag()
+    {
+        return stageMoveFlag;
     }
 
     
