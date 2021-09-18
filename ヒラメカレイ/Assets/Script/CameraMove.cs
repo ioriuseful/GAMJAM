@@ -13,6 +13,7 @@ public class CameraMove : MonoBehaviour
     public GameObject player;
     private GameObject gameManager;
     private Data data;
+    private bool changeStartFlag = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,8 @@ public class CameraMove : MonoBehaviour
             {
                 delay = 0;
                 data.SetStageChangeFlag(change);
+                changeStartFlag = false;
+                data.SetStageMoveFlag(changeStartFlag);
             }
         }
 
@@ -40,12 +43,16 @@ public class CameraMove : MonoBehaviour
             vCamera.SetActive(change);
             change = !change;
             delay = delayTime;
+            changeStartFlag = true;
+            data.SetStageMoveFlag(changeStartFlag);
         }
 
         float playerPosX = player.transform.position.x;
         camaraTarget.transform.position = new Vector3(playerPosX, camaraTarget.transform.position.y, camaraTarget.transform.position.z);
         vCamera.transform.position = new Vector3( camaraTarget.transform.position.x,vCamera.transform.position.y, vCamera.transform.position.z);
         vCamera2.transform.position = new Vector3( camaraTarget.transform.position.x,vCamera2.transform.position.y, vCamera2.transform.position.z);
+
+        //Debug.Log("----------" + data.GetStageMoveFlag());
 
     }
 

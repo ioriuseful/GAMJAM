@@ -8,6 +8,7 @@ public class EnemyControl : MonoBehaviour
     GameObject target;
     public GameObject searchBox;
     EnemySearch search;
+    PlayerControl player;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,24 +25,29 @@ public class EnemyControl : MonoBehaviour
     void Move()
     {
         velocity = Vector3.zero;
-        if (target != null)
+        if (target != null && player.GetState() == PlayerControl.State.Hirame)
         {
             velocity = (target.transform.position - transform.position).normalized * 0.05f;
         }
-        else
-        {
 
+        else if (target != null && player.GetState() == PlayerControl.State.Karei) 
+        {
+            transform.position += velocity;
         }
         transform.position += velocity;
     }
     void Rotate()
     {
-        if (target != null)
+        if (target != null && player.GetState() == PlayerControl.State.Hirame)
         {
             Vector3 a = (target.transform.position - transform.position);
             float angle = Mathf.Atan2(a.y, a.x);
             angle = angle / (3.1415f / 180f);
             transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
+        else
+        {
+
         }
     }
     void CheckSearch()
@@ -49,6 +55,7 @@ public class EnemyControl : MonoBehaviour
        if(search.GetSearchFlag())
         {
             target = search.GetTarget();
+            player = target.GetComponent<PlayerControl>();
         }
        else
         {
