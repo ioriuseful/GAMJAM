@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //シーン遷移
 
 public class PlayerControl : MonoBehaviour
 {
     Vector3 velocity;
     float hp;
     bool deadFlag;
+    bool clearFlag;
     bool air;
-
+    int score;
     private GameObject gameManager;
     private Data data;
 
@@ -23,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     {
         hp = 10;
         deadFlag = false;
+        clearFlag = false;
         air = true;
         state = State.Hirame;
         gameManager = GameObject.Find("DataOBJ");
@@ -59,6 +62,10 @@ public class PlayerControl : MonoBehaviour
         {
             air = true;
         }
+        if(collision.transform.tag == "Goal")
+        {
+            clearFlag = true;
+        }
     }
     void Move()
     {
@@ -71,15 +78,23 @@ public class PlayerControl : MonoBehaviour
                 velocity.y = -0.05f;
             }
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow)&&state==State.Hirame)
         {
             velocity.x = -0.1f;
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) && state == State.Karei)
         {
             velocity.x = 0.1f;
         }
-        if(Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.RightArrow) && state == State.Hirame)
+        {
+            velocity.x = 0.1f;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow) && state == State.Karei) 
+        {
+            velocity.x = -0.1f;
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             velocity.y = 0.1f;
         }
@@ -113,6 +128,11 @@ public class PlayerControl : MonoBehaviour
     {
         return deadFlag;
     }
+
+    public bool GetClearFlag()
+    {
+        return clearFlag;
+    }
     public float GetHp()
     {
         return hp;
@@ -120,6 +140,14 @@ public class PlayerControl : MonoBehaviour
     public State GetState()
     {
         return state;
+    }
+    public bool GetAirFlag()
+    {
+        return air;
+    }
+    public int GetScore()
+    {
+        return score;
     }
     void CheckState()
     {
