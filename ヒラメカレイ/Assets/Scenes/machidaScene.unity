@@ -1358,5 +1358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene
       objectReference: {fileID: 0}
+    - target: {fileID: 8010238221059450092, guid: 02c3c4befe0d78348adf16b61ddad4d1,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02c3c4befe0d78348adf16b61ddad4d1, type: 3}

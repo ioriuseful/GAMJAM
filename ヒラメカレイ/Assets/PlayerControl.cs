@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
     float hp;
     bool deadFlag;
     bool air;
-
+    int score;
     private GameObject gameManager;
     private Data data;
 
@@ -71,15 +71,23 @@ public class PlayerControl : MonoBehaviour
                 velocity.y = -0.05f;
             }
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow)&&state==State.Hirame)
         {
             velocity.x = -0.1f;
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) && state == State.Karei)
         {
             velocity.x = 0.1f;
         }
-        if(Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.RightArrow) && state == State.Hirame)
+        {
+            velocity.x = 0.1f;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow) && state == State.Karei) 
+        {
+            velocity.x = -0.1f;
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             velocity.y = 0.1f;
         }
@@ -120,6 +128,14 @@ public class PlayerControl : MonoBehaviour
     public State GetState()
     {
         return state;
+    }
+    public bool GetAirFlag()
+    {
+        return air;
+    }
+    public int GetScore()
+    {
+        return score;
     }
     void CheckState()
     {

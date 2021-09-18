@@ -24,7 +24,7 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (data.GetStageMoveFlag())
+        if (!data.GetStageMoveFlag())
         {
             CheckSearch();
             Move();
@@ -34,25 +34,34 @@ public class EnemyControl : MonoBehaviour
     void Move()
     {
         velocity = Vector3.zero;
-        if (target != null && player.GetState() == PlayerControl.State.Hirame)
-        {
-            velocity = (target.transform.position - transform.position).normalized * 0.05f;
-        }
-
-        else if (target != null && player.GetState() == PlayerControl.State.Karei) 
+   
+        if (target != null && player.GetState() == PlayerControl.State.Karei && !player.GetAirFlag())
         {
             transform.position += velocity;
+        }
+        else if (target != null)
+        {
+            velocity = (target.transform.position - transform.position).normalized * 0.05f;
         }
         transform.position += velocity;
     }
     void Rotate()
     {
-        if (target != null && player.GetState() == PlayerControl.State.Hirame)
+
+        if (target != null && player.GetState() == PlayerControl.State.Karei && !player.GetAirFlag())
+        {
+           // transform.position += velocity;
+        }
+        else if (target != null)
         {
             Vector3 a = (target.transform.position - transform.position);
             float angle = Mathf.Atan2(a.y, a.x);
             angle = angle / (3.1415f / 180f);
             transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
+        if (target != null && player.GetState() == PlayerControl.State.Hirame)
+        {
+            
         }
         else
         {
