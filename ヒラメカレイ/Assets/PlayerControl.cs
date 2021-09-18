@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
 
     private GameObject gameManager;
     private Data data;
-   
+
     public enum State
     {
       Hirame,Karei
@@ -27,15 +27,18 @@ public class PlayerControl : MonoBehaviour
         state = State.Hirame;
         gameManager = GameObject.Find("DataOBJ");
         data = gameManager.GetComponent<Data>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-        CheckDead();
-        CheckState();
+        if (!data.GetStageMoveFlag())
+        {
+            Move();
+            CheckDead();
+            CheckState();
+        }
+     
     }
     private void OnTriggerStay(Collider other)
     {
@@ -51,8 +54,7 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.transform.tag == "Player")
-        {}
+        
         if (collision.transform.tag == "Floor")
         {
             air = true;

@@ -9,18 +9,27 @@ public class EnemyControl : MonoBehaviour
     public GameObject searchBox;
     EnemySearch search;
     PlayerControl player;
+    private GameObject gameManager;
+    private Data data;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("DataOBJ");
+        data = gameManager.GetComponent<Data>();
+
         search = searchBox.GetComponent<EnemySearch>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckSearch();
-        Move();
-        Rotate();
+        if (data.GetStageMoveFlag())
+        {
+            CheckSearch();
+            Move();
+            Rotate();
+        }
     }
     void Move()
     {
