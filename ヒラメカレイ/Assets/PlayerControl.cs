@@ -11,12 +11,12 @@ public class PlayerControl : MonoBehaviour
 
     private GameObject gameManager;
     private Data data;
-
-    enum Direct
+   
+    public enum State
     {
-        Flont,Back,
+      Hirame,Karei
     };
-
+    State state;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
         hp = 10;
         deadFlag = false;
         air = true;
-
+        state = State.Hirame;
         gameManager = GameObject.Find("DataOBJ");
         data = gameManager.GetComponent<Data>();
 
@@ -35,12 +35,7 @@ public class PlayerControl : MonoBehaviour
     {
         Move();
         CheckDead();
-
-        //---------------------------
-        bool flag = data.GetStageChange();//取得falseが表カレイ.trueがヒラメ
-        Debug.Log(flag);
-        //---------------------------
-
+        CheckState();
     }
     private void OnTriggerStay(Collider other)
     {
@@ -65,6 +60,15 @@ public class PlayerControl : MonoBehaviour
     }
     void Move()
     {
+        velocity.x = 0;
+        if (air)
+        {
+            velocity.y -= 0.005f;
+            if (velocity.y < -0.05f)
+            {
+                velocity.y = -0.05f;
+            }
+        }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             velocity.x = -0.1f;
@@ -77,7 +81,7 @@ public class PlayerControl : MonoBehaviour
         {
             velocity.y = 0.1f;
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) && air) 
         {
             velocity.y = -0.1f;
         }
@@ -86,15 +90,7 @@ public class PlayerControl : MonoBehaviour
             velocity.y = 0.15f;
         }
         transform.position += velocity;
-        velocity.x = 0;
-        if(air)
-        {
-            velocity.y -= 0.005f;
-            if (velocity.y < -0.05f)
-            {
-                velocity.y = -0.05f;
-            }
-        }
+  
     }
     void Damage(float damage)
     {
@@ -118,5 +114,23 @@ public class PlayerControl : MonoBehaviour
     public float GetHp()
     {
         return hp;
+    }
+    public State GetState()
+    {
+        return state;
+    }
+    void CheckState()
+    {
+        bool flag = data.GetStageChange();//取得falseが表カレイ.trueがヒラメ
+        Debug.Log(flag);
+
+        if(!flag)
+        {
+            state = State.Hirame;
+        }
+        else
+        {
+            state = State.Karei;
+        }
     }
 }
