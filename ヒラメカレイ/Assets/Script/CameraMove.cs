@@ -14,6 +14,10 @@ public class CameraMove : MonoBehaviour
     private GameObject gameManager;
     private Data data;
     private bool changeStartFlag = false;
+
+    public AudioClip kaitenSE;
+    public AudioSource audioSourse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +49,11 @@ public class CameraMove : MonoBehaviour
             delay = delayTime;
             changeStartFlag = true;
             data.SetStageMoveFlag(changeStartFlag);
+            if(audioSourse != null)
+            {
+                audioSourse.volume = 0.2f;
+                audioSourse.PlayOneShot(kaitenSE);
+            }
         }
 
         float playerPosX = player.transform.position.x;
