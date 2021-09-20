@@ -48,7 +48,11 @@ MonoBehaviour:
   m_MinSize: {x: 680, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 100
+=======
+  controlID: 137
+>>>>>>> origin/machida
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +223,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 101
+=======
+  controlID: 97
+>>>>>>> origin/machida
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +252,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 102
+=======
+  controlID: 71
+>>>>>>> origin/machida
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -349,9 +361,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 00370000
     m_LastClickedID: 14080
     m_ExpandedIDs: 00000000f0360000f236000000ca9a3b
+=======
+    m_SelectedIDs: 10370000
+    m_LastClickedID: 14096
+    m_ExpandedIDs: 00000000ea360000ec36000000ca9a3b
+>>>>>>> origin/machida
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: Script
@@ -379,7 +397,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000f0360000f2360000
+=======
+    m_ExpandedIDs: 00000000ea360000ec360000
+>>>>>>> origin/machida
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,9 +524,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 9c2cffff3852ffffd2f8ffff54fbffff8c380000
+=======
+      m_SelectedIDs: 8c010000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 98f8ffff56fbffffdc350000
+>>>>>>> origin/machida
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -616,9 +644,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.17397298, y: -0.20456117, z: 0.036972497, w: -0.96255976}
   m_Size:
+<<<<<<< HEAD
     m_Target: 28.806917
     speed: 2
     m_Value: 27.566427
+=======
+    m_Target: 8.066856
+    speed: 2
+    m_Value: 8.066856
+>>>>>>> origin/machida
   m_Ortho:
     m_Target: 0
     speed: 2

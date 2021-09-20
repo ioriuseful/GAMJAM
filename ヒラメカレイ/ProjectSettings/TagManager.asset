@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Goal
   - UpStop
+  - kozakana
   layers:
   - Default
   - TransparentFX
