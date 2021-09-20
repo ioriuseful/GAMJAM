@@ -51,8 +51,31 @@ public class PlayerControl : MonoBehaviour
         }
         if (other.transform.tag == "Floor")
         {
-            air = false;
-            velocity.y = 0;
+            Vector3 vec = transform.position - other.transform.position;
+            //BoxCollider co = GetComponent<BoxCollider>();
+            //BoxCollider co2 = other.GetComponent<BoxCollider>();
+            if ((transform.position.y - transform.localScale.y / 2 + 0.1f) >= other.transform.position.y + other.transform.localScale.y / 2)
+            {
+                
+                
+                air = false;
+                velocity.y = 0;
+               // transform.position += vec.normalized / 10;
+            }
+            else if (((transform.position.y - transform.localScale.y / 2 + 0.1f) <= other.transform.position.y + other.transform.localScale.y / 2))
+            {
+                air = true;
+                vec.y = 0;
+                transform.position += vec.normalized / 10;
+            }
+
+            else
+            {
+                air = true;
+                transform.position += vec.normalized / 10;
+            }
+        
+
         }
     }
     private void OnTriggerExit(Collider collision)
