@@ -51,7 +51,7 @@ public class SceneManagement : MonoBehaviour
         }
         else if (sceneName == SceneNames.GameScene.ToString())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) || data.GetClearFlag())
             {
                 fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.ClearScene.ToString());
             }
