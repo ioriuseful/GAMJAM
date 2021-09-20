@@ -17,6 +17,8 @@ public class Data : MonoBehaviour
 
     private bool stageMoveFlag = false;
 
+    private int score;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,11 @@ public class Data : MonoBehaviour
 
         //Debug.Log(stageChangeFlag);
 
+    }
+
+    public bool GetClearFlag()
+    {
+        return clearFlag;
     }
 
 
@@ -81,6 +88,11 @@ public class Data : MonoBehaviour
     public bool GetStageMoveFlag()
     {
         return stageMoveFlag;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 
     

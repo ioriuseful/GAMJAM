@@ -8,6 +8,7 @@ TagManager:
   - Net
   - Enemy
   - Goal
+  - UpStop
   layers:
   - Default
   - TransparentFX

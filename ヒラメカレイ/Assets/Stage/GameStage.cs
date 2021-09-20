@@ -62,11 +62,6 @@ public class GameStage : MonoBehaviour
         {
             DestroyStage();
         }
-        if(Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log("Hit");
-            DestroyStage();
-        }
 
         StageIndex = maps;
     }
@@ -85,8 +80,6 @@ public class GameStage : MonoBehaviour
         {
             stageObject = (GameObject)Instantiate(stagenum[nextStage], new Vector3(index * StageSize, 0, 0), Quaternion.identity);
             ClearCount++;
-            Debug.Log(ClearFrag);
-            Debug.Log(ClearCount);
         }
 
         return stageObject;
