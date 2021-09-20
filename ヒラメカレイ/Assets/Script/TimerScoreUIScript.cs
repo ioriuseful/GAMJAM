@@ -34,5 +34,18 @@ public class TimerScoreUIScript : MonoBehaviour
             timerText.text = seconds.ToString() + "秒";
         }
 
+        Data.poolTime = seconds;
+        Data.poolScore = score;
+
+    }
+
+    public int GetTimer()
+    {
+        return seconds;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

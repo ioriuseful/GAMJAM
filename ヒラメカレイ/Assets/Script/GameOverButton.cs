@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TitleButtonScript : MonoBehaviour
+public class GameOverButton : MonoBehaviour
 {
-    public Button startButton;
+    public Button titleButton;
     public Button endButton;
 
     public GameObject sceneManagerOBJ;
@@ -16,14 +16,13 @@ public class TitleButtonScript : MonoBehaviour
     public AudioClip selectSE;
 
     private bool oneSound = false;
-
     private float tien = 1f;
     private bool tienFlag = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        startButton.Select();
+        titleButton.Select();
         sceneManagement = sceneManagerOBJ.GetComponent<SceneManagement>();
         oneSound = false;
     }
@@ -31,23 +30,24 @@ public class TitleButtonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(tien > 0)
+        if (tien > 0)
         {
             tien -= Time.deltaTime;
         }
         else tienFlag = true;
     }
 
-    public void OnClickStartButton()
+    public void OnClickTitleButton()
     {
         if (!tienFlag) return;
-        sceneManagement.OnClickGameScene();
-        if(!oneSound)
+        if (!oneSound)
         {
+            audioSource.volume = 0.5f;
             audioSource.PlayOneShot(ketteiSE);
             oneSound = true;
         }
-       
+      
+        sceneManagement.OnClickTitle();
     }
 
     public void OnClickEndButton()

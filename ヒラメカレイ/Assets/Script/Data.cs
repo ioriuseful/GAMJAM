@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Data : MonoBehaviour
 {
@@ -19,16 +20,30 @@ public class Data : MonoBehaviour
 
     private int score;
 
+    public static int poolTime;
+    public static int poolScore;
+
+
+    private GameObject timeUI;
+    private TimerScoreUIScript uIScript;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerControl = player.GetComponent<PlayerControl>();
+        if(SceneManager.GetActiveScene().name == "GamePlay")
+        {
+            timeUI = GameObject.Find("TimerScoreUI");
+            uIScript = timeUI.GetComponent<TimerScoreUIScript>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        score = playerControl.GetScore();
+        poolScore = score;
         //プレイヤーが死んでるかチェック
         if (playerControl.GetDeadFlag())
         {
@@ -36,7 +51,7 @@ public class Data : MonoBehaviour
         }
 
         //プレイヤーがゴールについたかチェック
-        if (clearFlag)//後でプレイヤーからもらう
+        if (playerControl.GetClearFlag())//後でプレイヤーからもらう
         {
             clearFlag = true;
         }
