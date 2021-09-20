@@ -15,6 +15,11 @@ public class PlayerControl : MonoBehaviour
     private GameObject gameManager;
     private Data data;
 
+    public AudioClip jump = null;
+    public AudioClip netHit = null;
+    public AudioClip dead = null;
+    public AudioClip eat = null;
+    AudioSource sound;
     public enum State
     {
       Hirame,Karei
@@ -31,6 +36,8 @@ public class PlayerControl : MonoBehaviour
         state = State.Hirame;
         gameManager = GameObject.Find("DataOBJ");
         data = gameManager.GetComponent<Data>();
+        sound = GetComponent<AudioSource>();
+        sound.volume = 0.5f;
     }
 
     // Update is called once per frame
@@ -46,9 +53,24 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+        if (other.transform.tag == "Goal")
+        {
+            clearFlag = true;
+        }
+        if(other.transform.tag=="kozakana")
+        {
+            if (eat != null)
+            {
+                sound.PlayOneShot(eat);
+            }
+        }
         if (other.transform.tag == "Net")
         {
             Damage(10);
+            if (netHit != null)
+            {
+                sound.PlayOneShot(netHit);
+            }
         }
         if (other.transform.tag == "Floor")
         {
@@ -92,10 +114,7 @@ public class PlayerControl : MonoBehaviour
         {
             air = true;
         }
-        if(collision.transform.tag == "Goal")
-        {
-            clearFlag = true;
-        }
+      
         if(collision.transform.tag=="UpStop")
         {
             upstop = false;
@@ -147,6 +166,10 @@ public class PlayerControl : MonoBehaviour
             if (upstop)
             { return; }
             velocity.y = 0.15f;
+            if(jump!=null)
+            {
+                sound.PlayOneShot(jump);
+            }
         }
         transform.position += velocity;
   
@@ -160,6 +183,10 @@ public class PlayerControl : MonoBehaviour
         if (hp >= 0)
         { 
             deadFlag = true;
+            if(dead!=null)
+            {
+                sound.PlayOneShot(dead);
+            }
         }
         else
         {

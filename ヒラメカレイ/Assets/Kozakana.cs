@@ -11,6 +11,8 @@ public class Kozakana : MonoBehaviour
     private GameObject gameManager;
     private Data data;
 
+   // public AudioClip eat;
+    AudioSource sound;
     // Start is called before the first frame update
     void Start()
     {
