@@ -19,6 +19,7 @@ public class GameStage : MonoBehaviour
     public float ClearFrag = 20;
     public float ClearCount = 0;
     public GameObject goalStage;
+    public GameObject startStage;
     public bool End = false;
 
 
@@ -69,8 +70,14 @@ public class GameStage : MonoBehaviour
     GameObject MakeStage(int index)
     {
   
-        int nextStage = Random.Range(0, stagenum.Length);
+        int nextStage = Random.Range(1, stagenum.Length);
         GameObject stageObject;
+        //if(ClearCount==1)
+        //{
+        //    Debug.Log(ClearCount);
+        //    stageObject = (GameObject)Instantiate(startStage, new Vector3(index * StageSize, 0, 0), Quaternion.identity);
+        //    ClearCount++;
+        //}
         if (ClearCount > ClearFrag)
         {
             stageObject = (GameObject)Instantiate(goalStage, new Vector3(index * StageSize, 0, 0), Quaternion.identity);
@@ -78,6 +85,7 @@ public class GameStage : MonoBehaviour
         }
         else
         {
+            Debug.Log(ClearCount);
             stageObject = (GameObject)Instantiate(stagenum[nextStage], new Vector3(index * StageSize, 0, 0), Quaternion.identity);
             ClearCount++;
         }
