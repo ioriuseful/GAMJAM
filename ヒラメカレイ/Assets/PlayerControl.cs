@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     bool deadFlag;
     bool clearFlag;
     bool air;
+    bool upstop;
     int score;
     private GameObject gameManager;
     private Data data;
@@ -26,7 +27,7 @@ public class PlayerControl : MonoBehaviour
         hp = 10;
         deadFlag = false;
         clearFlag = false;
-        air = true;
+        air = true;upstop = false;
         state = State.Hirame;
         gameManager = GameObject.Find("DataOBJ");
         data = gameManager.GetComponent<Data>();
@@ -77,6 +78,12 @@ public class PlayerControl : MonoBehaviour
         
 
         }
+        if (other.transform.tag == "UpStop")
+        {
+            Debug.Log("UpStop");
+            upstop = true;
+            velocity.y = 0;
+        }
     }
     private void OnTriggerExit(Collider collision)
     {
@@ -89,6 +96,14 @@ public class PlayerControl : MonoBehaviour
         {
             clearFlag = true;
         }
+        if(collision.transform.tag=="UpStop")
+        {
+            upstop = false;
+        }
+    }
+    private void OnTriggerEnter(Collider collider)
+    {
+    
     }
     void Move()
     {
@@ -119,6 +134,8 @@ public class PlayerControl : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
+            if(upstop)
+            { return; }
             velocity.y = 0.1f;
         }
         if (Input.GetKey(KeyCode.DownArrow) && air) 
@@ -127,6 +144,8 @@ public class PlayerControl : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            if (upstop)
+            { return; }
             velocity.y = 0.15f;
         }
         transform.position += velocity;
