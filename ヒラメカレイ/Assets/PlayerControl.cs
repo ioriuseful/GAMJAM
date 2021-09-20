@@ -10,10 +10,16 @@ public class PlayerControl : MonoBehaviour
     bool deadFlag;
     bool clearFlag;
     bool air;
+    bool upstop;
     int score;
     private GameObject gameManager;
     private Data data;
 
+    public AudioClip jump = null;
+    public AudioClip netHit = null;
+    public AudioClip dead = null;
+    public AudioClip eat = null;
+    AudioSource sound;
     public enum State
     {
       Hirame,Karei
@@ -26,10 +32,12 @@ public class PlayerControl : MonoBehaviour
         hp = 10;
         deadFlag = false;
         clearFlag = false;
-        air = true;
+        air = true;upstop = false;
         state = State.Hirame;
         gameManager = GameObject.Find("DataOBJ");
         data = gameManager.GetComponent<Data>();
+        sound = GetComponent<AudioSource>();
+        sound.volume = 0.5f;
     }
 
     // Update is called once per frame
@@ -45,13 +53,57 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+        if (other.transform.tag == "Goal")
+        {
+            clearFlag = true;
+        }
+        if(other.transform.tag=="kozakana")
+        {
+            if (eat != null)
+            {
+                sound.PlayOneShot(eat);
+            }
+        }
         if (other.transform.tag == "Net")
         {
             Damage(10);
+            if (netHit != null)
+            {
+                sound.PlayOneShot(netHit);
+            }
         }
         if (other.transform.tag == "Floor")
         {
-            air = false;
+            Vector3 vec = transform.position - other.transform.position;
+            //BoxCollider co = GetComponent<BoxCollider>();
+            //BoxCollider co2 = other.GetComponent<BoxCollider>();
+            if ((transform.position.y - transform.localScale.y / 2 + 0.1f) >= other.transform.position.y + other.transform.localScale.y / 2)
+            {
+                
+                
+                air = false;
+                velocity.y = 0;
+               // transform.position += vec.normalized / 10;
+            }
+            else if (((transform.position.y - transform.localScale.y / 2 + 0.1f) <= other.transform.position.y + other.transform.localScale.y / 2))
+            {
+                air = true;
+                vec.y = 0;
+                transform.position += vec.normalized / 10;
+            }
+
+            else
+            {
+                air = true;
+                transform.position += vec.normalized / 10;
+            }
+        
+
+        }
+        if (other.transform.tag == "UpStop")
+        {
+            Debug.Log("UpStop");
+            upstop = true;
             velocity.y = 0;
         }
     }
@@ -62,10 +114,15 @@ public class PlayerControl : MonoBehaviour
         {
             air = true;
         }
-        if(collision.transform.tag == "Goal")
+      
+        if(collision.transform.tag=="UpStop")
         {
-            clearFlag = true;
+            upstop = false;
         }
+    }
+    private void OnTriggerEnter(Collider collider)
+    {
+    
     }
     void Move()
     {
@@ -96,6 +153,8 @@ public class PlayerControl : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
+            if(upstop)
+            { return; }
             velocity.y = 0.1f;
         }
         if (Input.GetKey(KeyCode.DownArrow) && air) 
@@ -104,7 +163,13 @@ public class PlayerControl : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            if (upstop)
+            { return; }
             velocity.y = 0.15f;
+            if(jump!=null)
+            {
+                sound.PlayOneShot(jump);
+            }
         }
         transform.position += velocity;
   
@@ -118,6 +183,10 @@ public class PlayerControl : MonoBehaviour
         if (hp >= 0)
         { 
             deadFlag = true;
+            if(dead!=null)
+            {
+                sound.PlayOneShot(dead);
+            }
         }
         else
         {

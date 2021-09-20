@@ -8,6 +8,8 @@ TagManager:
   - Net
   - Enemy
   - Goal
+  - UpStop
+  - kozakana
   layers:
   - Default
   - TransparentFX
