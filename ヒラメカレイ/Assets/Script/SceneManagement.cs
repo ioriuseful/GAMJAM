@@ -15,6 +15,9 @@ public class SceneManagement : MonoBehaviour
     private GameObject gameManager;
     private Data data;
 
+    public AudioSource audioSource;
+    public AudioClip bgm;
+
     public enum SceneNames
     {
         TitleScene,
@@ -34,6 +37,16 @@ public class SceneManagement : MonoBehaviour
             gameManager = GameObject.Find("DataOBJ");
             data = gameManager.GetComponent<Data>();
         }
+
+        if(audioSource != null)
+        {
+            audioSource.volume = 0.02f;
+            audioSource.clip = bgm;
+            audioSource.Play();
+        }
+
+
+       
     }
 
     // Update is called once per frame
@@ -54,10 +67,19 @@ public class SceneManagement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1) || data.GetClearFlag())
             {
                 fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.ClearScene.ToString());
+                if (audioSource != null)
+                {
+                    audioSource.Stop();
+                }
+
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) || data.GetIsDeadFlag())
             {
                 fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString());
+                if (audioSource != null)
+                {
+                    audioSource.Stop();
+                }
             }
         }
         else if (sceneName == SceneNames.ClearScene.ToString())

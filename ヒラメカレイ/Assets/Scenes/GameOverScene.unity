@@ -449,9 +449,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 781407708689429802, guid: e8f1fa5e073c00a499d8589270bbf4ad,
         type: 3}
+      propertyPath: bgm
+      value: 
+      objectReference: {fileID: 8300000, guid: d75dacae1b6e36444aeb89ff26a479fc, type: 3}
+    - target: {fileID: 781407708689429802, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+        type: 3}
       propertyPath: fade
       value: 
       objectReference: {fileID: 406297988}
+    - target: {fileID: 781407708689429802, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1870577641}
     - target: {fileID: 3608441751379382792, guid: e8f1fa5e073c00a499d8589270bbf4ad,
         type: 3}
       propertyPath: m_Name
@@ -687,6 +697,12 @@ PrefabInstance:
 --- !u!1 &1870577640 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3608441751379382792, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 1395943949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1870577641 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4737823840537584783, guid: e8f1fa5e073c00a499d8589270bbf4ad,
     type: 3}
   m_PrefabInstance: {fileID: 1395943949}
   m_PrefabAsset: {fileID: 0}

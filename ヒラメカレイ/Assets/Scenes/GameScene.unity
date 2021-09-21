@@ -156,12 +156,12 @@ PrefabInstance:
     - target: {fileID: 8601743917220596282, guid: 542714455abf10e499fe098251487582,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.000000008520334
+      value: -0.0000000085002485
       objectReference: {fileID: 0}
     - target: {fileID: 8601743917220596282, guid: 542714455abf10e499fe098251487582,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000000013300343
+      value: 0.0000000013268989
       objectReference: {fileID: 0}
     - target: {fileID: 8601743917220596282, guid: 542714455abf10e499fe098251487582,
         type: 3}
@@ -812,6 +812,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de2e892a24600bf46a7339126e4e0ac4, type: 3}
+--- !u!82 &1319678162 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4737823840537584783, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 2020681420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1389603687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,13 +1390,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 781407708689429802, guid: e8f1fa5e073c00a499d8589270bbf4ad,
         type: 3}
+      propertyPath: bgm
+      value: 
+      objectReference: {fileID: 8300000, guid: 68b1ebe1caae7d44b87ba08acfe62a9c, type: 3}
+    - target: {fileID: 781407708689429802, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+        type: 3}
       propertyPath: fade
       value: 
       objectReference: {fileID: 284873855}
+    - target: {fileID: 781407708689429802, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1319678162}
     - target: {fileID: 3608441751379382792, guid: e8f1fa5e073c00a499d8589270bbf4ad,
         type: 3}
       propertyPath: m_Name
       value: SceneManagerOBJ
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737823840537584783, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737823840537584783, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
         type: 3}
