@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/machidaScene.unity
+- path: Assets/Scenes/sugaharaTest3.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
