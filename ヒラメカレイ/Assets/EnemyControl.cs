@@ -7,6 +7,7 @@ public class EnemyControl : MonoBehaviour
     Vector3 velocity;
     GameObject target;
     public GameObject searchBox;
+    public GameObject searchBox2;
     EnemySearch search;
     PlayerControl player;
     public GameObject point1;
@@ -14,6 +15,7 @@ public class EnemyControl : MonoBehaviour
     private GameObject gameManager;
     private Data data;
     Vector3 nextPos;
+    float speedDeltatime = 50.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +60,8 @@ public class EnemyControl : MonoBehaviour
         {
             velocity = (target.transform.position - transform.position).normalized * 0.05f;
         }
-        transform.position += velocity;
+        transform.position += velocity * Time.deltaTime * speedDeltatime;
+        searchBox.transform.position = searchBox2.transform.position;
     }
     void Rotate()
     {
@@ -69,6 +72,7 @@ public class EnemyControl : MonoBehaviour
             float angle = Mathf.Atan2(a.y, a.x);
             angle = angle / (3.1415f / 180f);
             transform.rotation = Quaternion.Euler(0, 0, angle);
+            searchBox.transform.rotation = searchBox2.transform.transform.rotation;
             if (angle > 0)
             {
                 sp.flipX = true;
@@ -90,6 +94,8 @@ public class EnemyControl : MonoBehaviour
                 angle += 360;
             }
             transform.rotation = Quaternion.Euler(0, 0, angle);
+            //searchBox.transform.rotation = Quaternion.Euler(0, 0, angle);
+            searchBox.transform.rotation = searchBox2.transform.transform.rotation;
             Debug.Log(angle);
             if (angle > 90 && angle < 270)
             {
@@ -110,6 +116,8 @@ public class EnemyControl : MonoBehaviour
             float angle = Mathf.Atan2(a.y, a.x);
             angle = angle / (3.1415f / 180f);
             transform.rotation = Quaternion.Euler(0, 0, angle);
+            //searchBox.transform.rotation = Quaternion.Euler(0, 0, angle);
+            searchBox.transform.rotation = searchBox2.transform.transform.rotation;
             if (angle > 90 && angle < 270)
             {
                 sp.flipY = true;
