@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/GameScene.unity
-=======
-- path: Assets/Scenes/machidaScene.unity
->>>>>>> origin/ヤマナカの作業場
   isLoaded: 1
   isActive: 1
   isSubScene: 0
