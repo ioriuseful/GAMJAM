@@ -75,17 +75,20 @@ public class Kozakana : MonoBehaviour
         Vector3 a = (nextPos - transform.position);
         float angle = Mathf.Atan2(a.y, a.x);
         angle = angle / (3.1415f / 180f);
+        if (angle < 0)
+        {
+            angle += 360;
+        }
         SpriteRenderer sp = GetComponent<SpriteRenderer>();
-        if (angle > 0)
+        if (angle > 90 && angle < 270)
+        {
+            sp.flipY = true;
+        }
+        else
         {
             sp.flipX = true;
             sp.flipY = false;
         }
-        else
-        {
-
-            sp.flipY = true;
-        }
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+            transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }
