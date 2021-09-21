@@ -25,13 +25,13 @@ public class YazirusiUI : MonoBehaviour
     {
         if(data.GetStageChange())
         {
-            //左
-            img.sprite = left;
+            
+            img.sprite = right;
         }
         else
         {
-            //右
-            img.sprite = right;
+            
+            img.sprite = left;
         }
     }
 }

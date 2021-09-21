@@ -75,18 +75,18 @@ public class GameStage : MonoBehaviour
         if (ClearCount == 1)
         {
             Debug.Log(ClearCount);
-            stageObject = (GameObject)Instantiate(startStage, new Vector3(index * StageSize -20, 0, 0), Quaternion.identity);
+            stageObject = (GameObject)Instantiate(startStage, new Vector3(index * StageSize-40, 0, 0), Quaternion.identity);
             ClearCount++;
         }
         if (ClearCount > ClearFrag)
         {
-            stageObject = (GameObject)Instantiate(goalStage, new Vector3(index * StageSize, 0, 0), Quaternion.identity);
+            stageObject = (GameObject)Instantiate(goalStage, new Vector3(index * -StageSize, 0, 0), Quaternion.identity);
             End = true;
         }
         else
         {
             Debug.Log(ClearCount);
-            stageObject = (GameObject)Instantiate(stagenum[nextStage], new Vector3(index * StageSize, 0, 0), Quaternion.identity);
+            stageObject = (GameObject)Instantiate(stagenum[nextStage], new Vector3(index * -StageSize, 0, 0), Quaternion.identity);
             ClearCount++;
         }
 
