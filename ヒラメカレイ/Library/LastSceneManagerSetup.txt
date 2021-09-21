@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/yamaScene.unity
-=======
-- path: Assets/Scenes/sugaharaTest3.unity
->>>>>>> origin/sugahara
+- path: Assets/Scenes/GameScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
