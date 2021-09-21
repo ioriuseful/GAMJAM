@@ -32,6 +32,7 @@ public class PlayerControl : MonoBehaviour
         hp = 10;
         deadFlag = false;
         clearFlag = false;
+        score = 0;
         air = true;upstop = false;
         state = State.Hirame;
         gameManager = GameObject.Find("DataOBJ");
@@ -113,6 +114,7 @@ public class PlayerControl : MonoBehaviour
         {
             if (eat != null)
             {
+                score++;
                 sound.PlayOneShot(eat);
             }
         }
@@ -155,7 +157,7 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow) && state == State.Karei)
         {
-            velocity.x = -0.1f;
+            velocity.x = -0.05f;
         }
        else if (Input.GetKey(KeyCode.D) && state == State.Hirame)
         {
