@@ -20,6 +20,12 @@ public class TitleButtonScript : MonoBehaviour
     private float tien = 1f;
     private bool tienFlag = false;
 
+    [RuntimeInitializeOnLoadMethod]
+    static void OnRuntimeMethodLoad()
+    {
+        Screen.SetResolution(1920, 1080, false, 60);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
