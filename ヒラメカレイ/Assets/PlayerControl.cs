@@ -124,6 +124,14 @@ public class PlayerControl : MonoBehaviour
                 sound.PlayOneShot(netHit);
             }
         }
+        if (collider.transform.tag == "Enemy")
+        {
+            Damage(10);
+            if (netHit != null)
+            {
+             //   sound.PlayOneShot(netHit);
+            }
+        }
     }
     void Move()
     {
@@ -136,15 +144,24 @@ public class PlayerControl : MonoBehaviour
                 velocity.y = -0.05f;
             }
         }
-        if (Input.GetKey(KeyCode.LeftArrow)&&state==State.Hirame)
+        if (Input.GetKey(KeyCode.LeftArrow) && state == State.Hirame) 
         {
             velocity.x = -0.1f;
         }
         else if (Input.GetKey(KeyCode.LeftArrow) && state == State.Karei)
         {
+     //       velocity.x = 0.1f;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow) && state == State.Karei)
+        {
+            velocity.x = -0.1f;
+        }
+       else if (Input.GetKey(KeyCode.D) && state == State.Hirame)
+        {
             velocity.x = 0.1f;
         }
-      
+
         if (Input.GetKey(KeyCode.DownArrow) && air) 
         {
             velocity.y = -0.1f;
@@ -168,10 +185,10 @@ public class PlayerControl : MonoBehaviour
     }
     void CheckDead()
     {
-        if (hp >= 0)
+        if (hp <= 0)
         { 
             deadFlag = true;
-            if(dead!=null)
+            if (dead != null) 
             {
                 sound.PlayOneShot(dead);
             }
