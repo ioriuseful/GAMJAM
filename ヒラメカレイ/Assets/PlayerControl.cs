@@ -144,20 +144,7 @@ public class PlayerControl : MonoBehaviour
         {
             velocity.x = 0.1f;
         }
-        if (Input.GetKey(KeyCode.RightArrow) && state == State.Hirame)
-        {
-            velocity.x = 0.1f;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow) && state == State.Karei) 
-        {
-            velocity.x = -0.1f;
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            if(upstop)
-            { return; }
-            velocity.y = 0.1f;
-        }
+      
         if (Input.GetKey(KeyCode.DownArrow) && air) 
         {
             velocity.y = -0.1f;
