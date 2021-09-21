@@ -88,7 +88,8 @@ public class Kozakana : MonoBehaviour
         {
             sp.flipX = true;
             sp.flipY = false;
+
         }
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }
