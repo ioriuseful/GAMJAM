@@ -40,7 +40,7 @@ public class SceneManagement : MonoBehaviour
 
         if(audioSource != null)
         {
-            audioSource.volume = 0.02f;
+            audioSource.volume = 0.05f;
             audioSource.clip = bgm;
             audioSource.Play();
         }
@@ -78,7 +78,7 @@ public class SceneManagement : MonoBehaviour
                 //fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString());
                 if (audioSource != null)
                 {
-                    audioSource.Stop();
+                    //audioSource.Stop();
                 }
             }
         }
