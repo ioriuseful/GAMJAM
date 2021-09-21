@@ -54,13 +54,13 @@ MonoBehaviour:
   - {fileID: 889087427297770402, guid: 5476b5526f1f1f4438750b40656f4f95, type: 3}
   - {fileID: 3829755008184347100, guid: 474b18def3d079648a39ee9fd9a950d7, type: 3}
   - {fileID: 906874783023095652, guid: 0b5fd4b009382724fada4b4ca6429a28, type: 3}
-  FirstStageIndex: 0
-  aheadStage: 0
+  FirstStageIndex: 1
+  aheadStage: 10
   StageList: []
   ClearFrag: 20
   ClearCount: 0
-  goalStage: {fileID: 2535599593653386864, guid: 1a9c270c9edd8494781fbcd2d18d0b65,
+  goalStage: {fileID: 2140364217239937364, guid: 411e9b7508f374549af1b3e2cd2b833a,
     type: 3}
-  startStage: {fileID: 2140364217239937364, guid: 411e9b7508f374549af1b3e2cd2b833a,
+  startStage: {fileID: 2535599593653386864, guid: 1a9c270c9edd8494781fbcd2d18d0b65,
     type: 3}
   End: 0
