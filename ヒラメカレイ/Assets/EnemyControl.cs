@@ -9,15 +9,17 @@ public class EnemyControl : MonoBehaviour
     public GameObject searchBox;
     EnemySearch search;
     PlayerControl player;
+    public GameObject point1;
+    public GameObject point2;
     private GameObject gameManager;
     private Data data;
-
+    Vector3 nextPos;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("DataOBJ");
         data = gameManager.GetComponent<Data>();
-
+        nextPos = point1.transform.position;
         search = searchBox.GetComponent<EnemySearch>();
     }
 
@@ -33,8 +35,21 @@ public class EnemyControl : MonoBehaviour
     }
     void Move()
     {
-        velocity = Vector3.zero;
-   
+       
+
+        float speed = 0.05f;
+        velocity = (nextPos - transform.position).normalized * speed;
+
+        if ((transform.position - point1.transform.position).magnitude <= speed)
+        {
+            nextPos = point2.transform.position;
+        }
+        if ((transform.position - point2.transform.position).magnitude <= speed)
+        {
+            nextPos = point1.transform.position;
+        }
+
+
         if (target != null && player.GetState() == PlayerControl.State.Karei && !player.GetAirFlag())
         {
             transform.position += velocity;
@@ -47,10 +62,23 @@ public class EnemyControl : MonoBehaviour
     }
     void Rotate()
     {
-
+        SpriteRenderer sp = GetComponent<SpriteRenderer>();
         if (target != null && player.GetState() == PlayerControl.State.Karei && !player.GetAirFlag())
         {
-           // transform.position += velocity;
+            Vector3 a = (nextPos - transform.position);
+            float angle = Mathf.Atan2(a.y, a.x);
+            angle = angle / (3.1415f / 180f);
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+            if (angle > 0)
+            {
+                sp.flipX = true;
+                sp.flipY = false;
+            }
+            else
+            {
+
+                sp.flipY = true;
+            }
         }
         else if (target != null)
         {
@@ -58,15 +86,42 @@ public class EnemyControl : MonoBehaviour
             float angle = Mathf.Atan2(a.y, a.x);
             angle = angle / (3.1415f / 180f);
             transform.rotation = Quaternion.Euler(0, 0, angle);
+            if (angle > 0)
+            {
+                sp.flipX = true;
+                sp.flipY = false;
+            }
+            else
+            {
+
+                sp.flipY = true;
+            }
         }
-        if (target != null && player.GetState() == PlayerControl.State.Hirame)
+
+        if (target == null )
         {
-            
+
+            Vector3 a = (nextPos - transform.position);
+            float angle = Mathf.Atan2(a.y, a.x);
+            angle = angle / (3.1415f / 180f);
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+            if (angle > 0)
+            {
+                sp.flipX = true;
+                sp.flipY = false;
+            }
+            else
+            {
+
+                sp.flipY = true;
+            }
         }
         else
         {
 
         }
+
+     
     }
     void CheckSearch()
     {

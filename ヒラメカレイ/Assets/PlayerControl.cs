@@ -37,7 +37,7 @@ public class PlayerControl : MonoBehaviour
         gameManager = GameObject.Find("DataOBJ");
         data = gameManager.GetComponent<Data>();
         sound = GetComponent<AudioSource>();
-        sound.volume = 0.5f;
+        sound.volume = 0.05f;
     }
 
     // Update is called once per frame
@@ -57,21 +57,7 @@ public class PlayerControl : MonoBehaviour
         {
             clearFlag = true;
         }
-        if(other.transform.tag=="kozakana")
-        {
-            if (eat != null)
-            {
-                sound.PlayOneShot(eat);
-            }
-        }
-        if (other.transform.tag == "Net")
-        {
-            Damage(10);
-            if (netHit != null)
-            {
-                sound.PlayOneShot(netHit);
-            }
-        }
+      
         if (other.transform.tag == "Floor")
         {
             Vector3 vec = transform.position - other.transform.position;
@@ -107,6 +93,7 @@ public class PlayerControl : MonoBehaviour
             velocity.y = 0;
         }
     }
+
     private void OnTriggerExit(Collider collision)
     {
         
@@ -122,7 +109,21 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
-    
+        if (collider.transform.tag == "kozakana")
+        {
+            if (eat != null)
+            {
+                sound.PlayOneShot(eat);
+            }
+        }
+        if (collider.transform.tag == "Net")
+        {
+            Damage(10);
+            if (netHit != null)
+            {
+                sound.PlayOneShot(netHit);
+            }
+        }
     }
     void Move()
     {

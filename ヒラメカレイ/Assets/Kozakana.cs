@@ -10,8 +10,8 @@ public class Kozakana : MonoBehaviour
     bool deadFlag;
     private GameObject gameManager;
     private Data data;
-
-   // public AudioClip eat;
+   
+    // public AudioClip eat;
     AudioSource sound;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,15 @@ public class Kozakana : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            deadFlag = true;
+            PlayerControl player = other.GetComponent<PlayerControl>();
+            if(player.GetState()==PlayerControl.State.Hirame)
+            {
+                deadFlag = true;
+            }
+            else
+            {
+
+            }
         }
     }
     // Update is called once per frame
@@ -37,18 +45,19 @@ public class Kozakana : MonoBehaviour
         {
             Move();
             CheckDead();
+            Rotate();
         }
     }
     private void Move()
     {
         float speed = 0.05f;
-        velocity = ( nextPos- transform.position ).normalized * speed;
+        velocity = (nextPos - transform.position).normalized * speed;
 
-        if ((transform.position-point1.transform.position).magnitude <= speed)
+        if ((transform.position - point1.transform.position).magnitude <= speed)
         {
             nextPos = point2.transform.position;
         }
-        if ((transform.position-point2.transform.position).magnitude <= speed)
+        if ((transform.position - point2.transform.position).magnitude <= speed)
         {
             nextPos = point1.transform.position;
         }
@@ -60,5 +69,23 @@ public class Kozakana : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    void Rotate()
+    {
+        Vector3 a = (nextPos - transform.position);
+        float angle = Mathf.Atan2(a.y, a.x);
+        angle = angle / (3.1415f / 180f);
+        SpriteRenderer sp = GetComponent<SpriteRenderer>();
+        if (angle > 0)
+        {
+            sp.flipX = true;
+            sp.flipY = false;
+        }
+        else
+        {
+
+            sp.flipY = true;
+        }
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }
