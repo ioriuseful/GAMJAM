@@ -227,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 318293956780540029, guid: b178e3f64b5543a40af8755df5b8f0d9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 318293956780540029, guid: b178e3f64b5543a40af8755df5b8f0d9,
         type: 3}
@@ -283,6 +283,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BackGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664376954232522507, guid: b178e3f64b5543a40af8755df5b8f0d9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664376956189198625, guid: b178e3f64b5543a40af8755df5b8f0d9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b178e3f64b5543a40af8755df5b8f0d9, type: 3}
