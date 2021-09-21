@@ -75,7 +75,7 @@ public class SceneManagement : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) || data.GetIsDeadFlag())
             {
-                fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString());
+                //fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString());
                 if (audioSource != null)
                 {
                     audioSource.Stop();

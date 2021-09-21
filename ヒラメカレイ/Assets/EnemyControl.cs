@@ -85,16 +85,21 @@ public class EnemyControl : MonoBehaviour
             Vector3 a = (target.transform.position - transform.position);
             float angle = Mathf.Atan2(a.y, a.x);
             angle = angle / (3.1415f / 180f);
-            transform.rotation = Quaternion.Euler(0, 0, angle);
-            if (angle > 0)
+            if (angle < 0)
             {
-                sp.flipX = true;
-                sp.flipY = false;
+                angle += 360;
+            }
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+            Debug.Log(angle);
+            if (angle > 90 && angle < 270)
+            {
+                sp.flipY = true;
             }
             else
             {
+                sp.flipX = true;
+                sp.flipY = false;
 
-                sp.flipY = true;
             }
         }
 
