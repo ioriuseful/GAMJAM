@@ -9,13 +9,14 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock001_Material_Autodesk Interactive
   m_Shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ _DETAIL_MULX2 _EMISSIVE_SIMPLE _METALLICGLOSSMAP _NORMALMAP
-    _OUTLINE_NML _PARALLAXMAP _SPECGLOSSMAP
+  m_ShaderKeywords: _ _ALPHAPREMULTIPLY_ON _DETAIL_MULX2 _EMISSIVE_SIMPLE _METALLICGLOSSMAP
+    _NORMALMAP _OUTLINE_NML _PARALLAXMAP _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -163,7 +164,7 @@ Material:
     - _DistortionEnabled: 0
     - _DistortionStrength: 1
     - _DistortionStrengthScaled: 0
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EMISSIVE: 0
     - _EmissionEnabled: 0
     - _Farthest_Distance: 100
@@ -209,7 +210,7 @@ Material:
     - _LightingEnabled: 1
     - _MatCap: 0
     - _Metallic: 0
-    - _Mode: 0
+    - _Mode: 3
     - _Nearest_Distance: 0.5
     - _OUTLINE: 0
     - _OcclusionStrength: 1
@@ -254,7 +255,7 @@ Material:
     - _Unlit_Intensity: 1
     - _Use_1stAs2nd: 0
     - _Use_BaseAs1st: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _simpleUI: 0
     - _utsTechnique: 0
     - _utsVersion: 2.075
