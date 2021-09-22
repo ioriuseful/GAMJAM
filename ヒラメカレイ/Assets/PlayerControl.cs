@@ -20,6 +20,9 @@ public class PlayerControl : MonoBehaviour
     public AudioClip dead = null;
     public AudioClip eat = null;
     AudioSource sound;
+    bool soundOneFlag = false;
+    float speedDeltatime = 50.0f;
+    bool netHitFlag = false;
     public enum State
     {
       Hirame,Karei
@@ -38,7 +41,8 @@ public class PlayerControl : MonoBehaviour
         gameManager = GameObject.Find("DataOBJ");
         data = gameManager.GetComponent<Data>();
         sound = GetComponent<AudioSource>();
-        sound.volume = 0.05f;
+        sound.volume = 0.5f;
+        soundOneFlag = false;
     }
 
     // Update is called once per frame
@@ -87,7 +91,7 @@ public class PlayerControl : MonoBehaviour
         
 
         }
-        if (other.transform.tag == "UpStop")
+        if (other.transform.tag == "UpStop" && !netHitFlag)
         {
             Debug.Log("UpStop");
             upstop = true;
@@ -103,35 +107,52 @@ public class PlayerControl : MonoBehaviour
             air = true;
         }
       
-        if(collision.transform.tag=="UpStop")
+        if(collision.transform.tag=="UpStop" && !netHitFlag)
         {
             upstop = false;
         }
     }
+
+    public void NetHitTrigger()
+    {
+        Damage(10);
+    }
+    public void UPScore()
+    {
+        score++;
+    }
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.transform.tag == "kozakana")
+        if (collider.transform.tag == "Goal")
         {
-            if (eat != null)
+            clearFlag = true;
+        }
+        if (collider.transform.tag == "kozakana" && !netHitFlag)
+        {
+
+            if (eat != null && state != State.Karei)
             {
-                score++;
+                //score++;
                 sound.PlayOneShot(eat);
+               // Destroy(collider.gameObject);
+                
             }
         }
         if (collider.transform.tag == "Net")
         {
-            Damage(10);
+            //Damage(10);
+            netHitFlag = true;
             if (netHit != null)
             {
                 sound.PlayOneShot(netHit);
             }
         }
-        if (collider.transform.tag == "Enemy")
+        if (collider.transform.tag == "Enemy" && !netHitFlag)
         {
             Damage(10);
-            if (netHit != null)
+            if (dead != null)
             {
-             //   sound.PlayOneShot(netHit);
+                sound.PlayOneShot(dead);
             }
         }
     }
@@ -140,11 +161,17 @@ public class PlayerControl : MonoBehaviour
         velocity.x = 0;
         if (air)
         {
-            velocity.y -= 0.005f;
+            velocity.y -= 0.005f * Time.deltaTime * speedDeltatime; ;
             if (velocity.y < -0.05f)
             {
                 velocity.y = -0.05f;
             }
+        }
+
+        if (deadFlag)
+        {
+            transform.position += velocity * Time.deltaTime * speedDeltatime;
+            return;
         }
         if (Input.GetKey(KeyCode.LeftArrow) && state == State.Hirame) 
         {
@@ -168,7 +195,7 @@ public class PlayerControl : MonoBehaviour
         {
             velocity.y = -0.1f;
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+        else if(Input.GetKeyDown(KeyCode.Space))
         {
             if (upstop)
             { return; }
@@ -178,7 +205,8 @@ public class PlayerControl : MonoBehaviour
                 sound.PlayOneShot(jump);
             }
         }
-        transform.position += velocity;
+        
+        transform.position += velocity * Time.deltaTime * speedDeltatime;
   
     }
     void Damage(float damage)
@@ -190,10 +218,11 @@ public class PlayerControl : MonoBehaviour
         if (hp <= 0)
         { 
             deadFlag = true;
-            if (dead != null) 
-            {
-                sound.PlayOneShot(dead);
-            }
+            //if (dead != null && soundOneFlag == false) 
+            //{
+            //    sound.PlayOneShot(dead);
+            //    soundOneFlag = true;
+            //}
         }
         else
         {

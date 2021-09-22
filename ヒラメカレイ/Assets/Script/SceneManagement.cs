@@ -17,6 +17,7 @@ public class SceneManagement : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip bgm;
+    bool oneFlag = false;
 
     public enum SceneNames
     {
@@ -29,6 +30,8 @@ public class SceneManagement : MonoBehaviour
     
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Application.targetFrameRate = 60;
         sceneName = SceneManager.GetActiveScene().name;
 
@@ -40,7 +43,7 @@ public class SceneManagement : MonoBehaviour
 
         if(audioSource != null)
         {
-            audioSource.volume = 0.05f;
+            audioSource.volume = 0.5f;
             audioSource.clip = bgm;
             audioSource.Play();
         }
@@ -64,22 +67,25 @@ public class SceneManagement : MonoBehaviour
         }
         else if (sceneName == SceneNames.GameScene.ToString())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) || data.GetClearFlag())
+            if (Input.GetKeyDown(KeyCode.Alpha1) || data.GetClearFlag()  )
             {
-                fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.ClearScene.ToString());
+                if(!oneFlag) fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.ClearScene.ToString());
+
                 if (audioSource != null)
                 {
                     audioSource.Stop();
                 }
+                oneFlag = true;
 
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) || data.GetIsDeadFlag())
             {
-                //fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString());
+                if (!oneFlag) fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString(),2.5f);
                 if (audioSource != null)
                 {
-                    //audioSource.Stop();
+                    audioSource.Stop();
                 }
+                oneFlag = true;
             }
         }
         else if (sceneName == SceneNames.ClearScene.ToString())

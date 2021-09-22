@@ -9,7 +9,9 @@ public class NetControl : MonoBehaviour
     GameObject target;
     private GameObject gameManager;
     private Data data;
+    float speedDeltatime = 40.0f;
 
+    private PlayerControl playerControl;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +31,8 @@ public class NetControl : MonoBehaviour
     }
     void Move()
     {
-        transform.position += velocity;
-        if(hitFlag)
+        transform.position += velocity * Time.deltaTime * speedDeltatime;
+        if (hitFlag)
         {
             velocity.y = 0.3f;
             Hit(target);
@@ -48,9 +50,20 @@ public class NetControl : MonoBehaviour
             target = (other.gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            hitFlag = true;
+            target = (other.gameObject);
+            playerControl = other.GetComponent<PlayerControl>();
+            playerControl.NetHitTrigger();
+        }
+    }
     void Hit(GameObject player)
     {
-        player.transform.position = transform.position - new Vector3(0, 1f, 0);
+        player.transform.position = transform.position - new Vector3(0, 1f, 0) * Time.deltaTime * speedDeltatime;
     }
     
 }

@@ -35,6 +35,14 @@ public class GameOverButton : MonoBehaviour
             tien -= Time.deltaTime;
         }
         else tienFlag = true;
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            titleButton.Select();
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            endButton.Select();
+        }
     }
 
     public void OnClickTitleButton()

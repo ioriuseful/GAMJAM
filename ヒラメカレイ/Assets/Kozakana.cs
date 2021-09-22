@@ -10,7 +10,8 @@ public class Kozakana : MonoBehaviour
     bool deadFlag;
     private GameObject gameManager;
     private Data data;
-   
+    float speedDeltatime = 50.0f;
+    private PlayerControl playerControl;
     // public AudioClip eat;
     AudioSource sound;
     // Start is called before the first frame update
@@ -31,11 +32,22 @@ public class Kozakana : MonoBehaviour
             if(player.GetState()==PlayerControl.State.Hirame)
             {
                 deadFlag = true;
+                Destroy(this.gameObject);
             }
             else
             {
 
             }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            playerControl = other.GetComponent<PlayerControl>();
+            playerControl.UPScore();
+            Destroy(this.gameObject);
+           
         }
     }
     // Update is called once per frame
@@ -61,7 +73,7 @@ public class Kozakana : MonoBehaviour
         {
             nextPos = point1.transform.position;
         }
-        transform.position += velocity;
+        transform.position += velocity * Time.deltaTime * speedDeltatime;
     }
     void CheckDead()
     {

@@ -42,6 +42,15 @@ public class TitleButtonScript : MonoBehaviour
             tien -= Time.deltaTime;
         }
         else tienFlag = true;
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            startButton.Select();
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            endButton.Select();
+        }
     }
 
     public void OnClickStartButton()
