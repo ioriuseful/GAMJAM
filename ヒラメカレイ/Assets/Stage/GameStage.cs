@@ -17,7 +17,7 @@ public class GameStage : MonoBehaviour
     /// 下三つ実験用クリアステージ作成
     /// </summary>
     public float ClearFrag = 20;
-    public float ClearCount = 0;
+    public int ClearCount = 0;
     public GameObject goalStage;
     public GameObject startStage;
     public bool End = false;
@@ -86,7 +86,7 @@ public class GameStage : MonoBehaviour
         else
         {
             Debug.Log(ClearCount);
-            stageObject = (GameObject)Instantiate(stagenum[nextStage], new Vector3(index * -StageSize, 0, 0), Quaternion.identity);
+            stageObject = (GameObject)Instantiate(stagenum[ClearCount], new Vector3(index * -StageSize, 0, 0), Quaternion.identity);
             ClearCount++;
         }
 
