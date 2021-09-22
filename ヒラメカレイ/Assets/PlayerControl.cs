@@ -20,6 +20,7 @@ public class PlayerControl : MonoBehaviour
     public AudioClip netHit = null;
     public AudioClip dead = null;
     public AudioClip eat = null;
+    ParticleSystem part;
     AudioSource sound;
     bool soundOneFlag = false;
     float speedDeltatime = 50.0f;
@@ -34,6 +35,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         hp = 10;
+        part = GetComponentInChildren<ParticleSystem>();
         deadFlag = false;
         clearFlag = false;
         score = 0;
@@ -61,14 +63,22 @@ public class PlayerControl : MonoBehaviour
     }
     void AlphaMove()
     {
-       // if (!GetAirFlag() && GetState() == State.Karei) 
-       // {
-       //     kareimat.material.color = new Color(0, 0, 1,0.1f);
-       // }
-       //else if (GetAirFlag())
-       // {
-       //     kareimat.material.color = new Color(1, 1, 1, 1);
-       // }
+        if (!GetAirFlag() && GetState() == State.Karei)
+        {
+            if(!part.isPlaying)
+            {
+                part.Play();
+            }
+
+        }
+        else if(GetState()==State.Hirame)
+        {
+            part.Stop();
+        }
+        else if (GetAirFlag())
+        {
+            part.Stop();
+        }
     }
     private void OnTriggerStay(Collider other)
     {
@@ -105,7 +115,7 @@ public class PlayerControl : MonoBehaviour
         
 
         }
-        if (other.transform.tag == "UpStop" && !netHitFlag)
+        if (other.transform.tag == "UpStop" )
         {
             Debug.Log("UpStop");
             upstop = true;
@@ -121,7 +131,7 @@ public class PlayerControl : MonoBehaviour
             air = true;
         }
       
-        if(collision.transform.tag=="UpStop" && !netHitFlag)
+        if(collision.transform.tag=="UpStop")
         {
             upstop = false;
         }

@@ -18,6 +18,10 @@ public class EnemySearch : MonoBehaviour
     void Update()
     {
         cooltime -= Time.deltaTime;
+        if (cooltime > 0)
+        {
+            target = null;
+        }
     }
    
     private void OnTriggerStay(Collider other)
@@ -34,6 +38,7 @@ public class EnemySearch : MonoBehaviour
                 Mathf.Abs((transform.position - other.transform.position).magnitude)) 
             {
                 cooltime = 3;
+                
             }
             
         }
@@ -53,5 +58,9 @@ public class EnemySearch : MonoBehaviour
     public GameObject GetTarget()
     {
         return target;
+    }
+    public void SetCoolTime(float time)
+    {
+        cooltime = time;
     }
 }
