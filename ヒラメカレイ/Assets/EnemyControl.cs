@@ -35,6 +35,13 @@ public class EnemyControl : MonoBehaviour
             Rotate();
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Floor")
+        {
+            search.SetCoolTime(5);
+        }
+    }
     void Move()
     {
        
@@ -42,11 +49,11 @@ public class EnemyControl : MonoBehaviour
         float speed = 0.05f;
         velocity = (nextPos - transform.position).normalized * speed;
 
-        if ((transform.position - point1.transform.position).magnitude <= speed)
+        if (Mathf.Abs((transform.position - point1.transform.position).magnitude) < Time.deltaTime * speedDeltatime + 0.1f) 
         {
             nextPos = point2.transform.position;
         }
-        if ((transform.position - point2.transform.position).magnitude <= speed)
+     else   if (Mathf.Abs((transform.position - point2.transform.position).magnitude) < Time.deltaTime * speedDeltatime + 0.1f) 
         {
             nextPos = point1.transform.position;
         }
@@ -73,15 +80,19 @@ public class EnemyControl : MonoBehaviour
             angle = angle / (3.1415f / 180f);
             transform.rotation = Quaternion.Euler(0, 0, angle);
             searchBox.transform.rotation = searchBox2.transform.transform.rotation;
-            if (angle > 0)
+            if (angle < 0)
             {
-                sp.flipX = true;
-                sp.flipY = false;
+                angle += 360;
+            }
+            if (angle > 90 && angle < 270)
+            {
+                sp.flipY = true;
             }
             else
             {
+                sp.flipX = true;
+                sp.flipY = false;
 
-                sp.flipY = true;
             }
         }
         else if (target != null)
@@ -118,6 +129,10 @@ public class EnemyControl : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, angle);
             //searchBox.transform.rotation = Quaternion.Euler(0, 0, angle);
             searchBox.transform.rotation = searchBox2.transform.transform.rotation;
+            if (angle < 0)
+            {
+                angle += 360;
+            }
             if (angle > 90 && angle < 270)
             {
                 sp.flipY = true;
@@ -141,7 +156,10 @@ public class EnemyControl : MonoBehaviour
        if(search.GetSearchFlag())
         {
             target = search.GetTarget();
-            player = target.GetComponent<PlayerControl>();
+            if(target!=null)
+            {
+                player = target.GetComponent<PlayerControl>();
+            }
         }
        else
         {

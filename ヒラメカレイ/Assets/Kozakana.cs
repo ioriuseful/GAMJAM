@@ -107,4 +107,5 @@ public class Kozakana : MonoBehaviour
         }
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+    
 }
