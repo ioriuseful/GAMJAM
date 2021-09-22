@@ -31,7 +31,11 @@ public class Data : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        playerControl = player.GetComponent<PlayerControl>();
+        if(player != null)
+        {
+            playerControl = player.GetComponent<PlayerControl>();
+        }
+        
         if(SceneManager.GetActiveScene().name == "GamePlay")
         {
             timeUI = GameObject.Find("TimerScoreUI");
@@ -42,19 +46,25 @@ public class Data : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = playerControl.GetScore();
-        poolScore = score;
-        //プレイヤーが死んでるかチェック
-        if (playerControl.GetDeadFlag())
+        if(player != null)
         {
-            isDeadFlag = true;
+            score = playerControl.GetScore();
+            poolScore = score;
+            //プレイヤーが死んでるかチェック
+            if (playerControl.GetDeadFlag())
+            {
+                isDeadFlag = true;
+            }
+            //プレイヤーがゴールについたかチェック
+            if (playerControl.GetClearFlag())//後でプレイヤーからもらう
+            {
+                clearFlag = true;
+            }
         }
+       
+       
 
-        //プレイヤーがゴールについたかチェック
-        if (playerControl.GetClearFlag())//後でプレイヤーからもらう
-        {
-            clearFlag = true;
-        }
+       
 
         //Debug.Log(stageChangeFlag);
 

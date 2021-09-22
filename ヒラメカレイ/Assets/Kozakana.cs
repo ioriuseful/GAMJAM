@@ -45,9 +45,12 @@ public class Kozakana : MonoBehaviour
         if (other.tag == "Player")
         {
             playerControl = other.GetComponent<PlayerControl>();
-            playerControl.UPScore();
-            Destroy(this.gameObject);
-           
+            if (playerControl.GetState() == PlayerControl.State.Hirame) 
+            {
+                playerControl.UPScore();
+                Destroy(this.gameObject);
+            }
+      
         }
     }
     // Update is called once per frame
@@ -104,4 +107,5 @@ public class Kozakana : MonoBehaviour
         }
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+    
 }

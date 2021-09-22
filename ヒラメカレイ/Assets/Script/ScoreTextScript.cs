@@ -22,7 +22,7 @@ public class ScoreTextScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "獲った魚のスコア:" + scoreNum.ToString();
-        time.text = "クリアタイム:" + timeNum.ToString() + " 0秒";
+        score.text = "獲った魚のスコア:" + scoreNum.ToString() + "匹";
+        time.text = "クリアタイム:" + timeNum.ToString() + " 秒";
     }
 }
