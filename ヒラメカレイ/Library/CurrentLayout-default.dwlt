@@ -112,10 +112,17 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
+<<<<<<< HEAD
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 7617
+=======
+  m_MinSize: {x: 677, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
+  vertical: 0
+  controlID: 14235
+>>>>>>> origin/machida
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +147,11 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 7666
+=======
+  controlID: 14236
+>>>>>>> origin/machida
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,11 +172,19 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1225
+<<<<<<< HEAD
     height: 451
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
   controlID: 7667
+=======
+    height: 442
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
+  vertical: 0
+  controlID: 14237
+>>>>>>> origin/machida
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,7 +203,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 303
-    height: 451
+    height: 442
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -210,16 +229,27 @@ MonoBehaviour:
     x: 303
     y: 0
     width: 922
+<<<<<<< HEAD
     height: 451
+=======
+    height: 442
+>>>>>>> origin/machida
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
+<<<<<<< HEAD
   - {fileID: 15}
   - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 2
+=======
+  - {fileID: 12}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 1
+>>>>>>> origin/machida
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -236,9 +266,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 451
+    y: 442
     width: 1225
-    height: 280
+    height: 289
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
@@ -297,7 +327,11 @@ MonoBehaviour:
     x: 304
     y: 19
     width: 920
+<<<<<<< HEAD
     height: 430
+=======
+    height: 421
+>>>>>>> origin/machida
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -316,7 +350,7 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 06000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
@@ -389,14 +423,20 @@ MonoBehaviour:
     x: 0
     y: 73.6
     width: 302
-    height: 430
+    height: 421
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 14710000
       m_LastClickedID: 28948
       m_ExpandedIDs: a623ffff2071000046710000
+=======
+      m_SelectedIDs: 6851feff
+      m_LastClickedID: -110232
+      m_ExpandedIDs: 48c0feffb05f0000
+>>>>>>> origin/machida
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -444,7 +484,11 @@ MonoBehaviour:
     x: 303.2
     y: 73.6
     width: 920
+<<<<<<< HEAD
     height: 430
+=======
+    height: 421
+>>>>>>> origin/machida
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 567745f0a7b64154eb52ae2cd0aa325a
@@ -456,9 +500,13 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 4.54, z: 0}
+    m_Target: {x: -0.6700001, y: -0.31999993, z: 0}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: -218.27922, y: 22.856955, z: 0}
+=======
+    m_Value: {x: -0.6700001, y: -0.31999993, z: 0}
+>>>>>>> origin/machida
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -496,21 +544,29 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
     m_Target: {x: 0.14051756, y: -0.014850597, z: 0.0021079197, w: 0.98996526}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: 0.14051747, y: -0.014850588, z: 0.0021079185, w: 0.98996466}
   m_Size:
     m_Target: 4.853648
     speed: 2
     m_Value: 28.220877
+=======
+    m_Value: {x: 0, y: 0.00000019444721, z: 0, w: -1}
+  m_Size:
+    m_Target: 5.3142147
+    speed: 2
+    m_Value: 5.0142145
+>>>>>>> origin/machida
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -583,9 +639,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 524
+    y: 515.2
     width: 1224
-    height: 259
+    height: 268
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -600,20 +656,27 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Stage
+    - Assets/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Stage
+  - Assets/Resources
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: "C:\\Users\\K018A1418\\Desktop\\21GameJam\\\u30D2\u30E9\u30E1\u30AB\u30EC\u30A4"
+  m_LastProjectPath: "C:\\Users\\machi\\Desktop\\jam\\\u30D2\u30E9\u30E1\u30AB\u30EC\u30A4"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 21}
     m_SelectedIDs: d43f0000
     m_LastClickedID: 16340
     m_ExpandedIDs: 00000000a03f0000a23f0000a43f000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 48370000
+    m_LastClickedID: 14152
+    m_ExpandedIDs: 000000004437000046370000483700006a37000000ca9a3b
+>>>>>>> origin/machida
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -641,7 +704,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a03f0000a23f0000a43f000000ca9a3b
+=======
+    m_ExpandedIDs: 0000000044370000463700004837000000ca9a3b
+>>>>>>> origin/machida
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
