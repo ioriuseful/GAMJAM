@@ -15,6 +15,7 @@ public class PlayerControl : MonoBehaviour
     private GameObject gameManager;
     private Data data;
 
+  
     public AudioClip jump = null;
     public AudioClip netHit = null;
     public AudioClip dead = null;
@@ -43,6 +44,7 @@ public class PlayerControl : MonoBehaviour
         sound = GetComponent<AudioSource>();
         sound.volume = 0.5f;
         soundOneFlag = false;
+      
     }
 
     // Update is called once per frame
@@ -53,8 +55,20 @@ public class PlayerControl : MonoBehaviour
             Move();
             CheckDead();
             CheckState();
+            AlphaMove();
         }
      
+    }
+    void AlphaMove()
+    {
+       // if (!GetAirFlag() && GetState() == State.Karei) 
+       // {
+       //     kareimat.material.color = new Color(0, 0, 1,0.1f);
+       // }
+       //else if (GetAirFlag())
+       // {
+       //     kareimat.material.color = new Color(1, 1, 1, 1);
+       // }
     }
     private void OnTriggerStay(Collider other)
     {
