@@ -1615,7 +1615,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bgm
       value: 
-      objectReference: {fileID: 8300000, guid: 68b1ebe1caae7d44b87ba08acfe62a9c, type: 3}
+      objectReference: {fileID: 8300000, guid: c608c8319bd80884dbb8704d7c134aba, type: 3}
     - target: {fileID: 781407708689429802, guid: e8f1fa5e073c00a499d8589270bbf4ad,
         type: 3}
       propertyPath: fade
