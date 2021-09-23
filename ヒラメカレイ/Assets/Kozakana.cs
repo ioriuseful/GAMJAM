@@ -32,6 +32,7 @@ public class Kozakana : MonoBehaviour
             if(player.GetState()==PlayerControl.State.Hirame)
             {
                 deadFlag = true;
+                playerControl.UPScore();
                 Destroy(this.gameObject);
             }
             else
@@ -47,8 +48,8 @@ public class Kozakana : MonoBehaviour
             playerControl = other.GetComponent<PlayerControl>();
             if (playerControl.GetState() == PlayerControl.State.Hirame) 
             {
-                playerControl.UPScore();
-                Destroy(this.gameObject);
+                //playerControl.UPScore();
+                //Destroy(this.gameObject);
             }
       
         }

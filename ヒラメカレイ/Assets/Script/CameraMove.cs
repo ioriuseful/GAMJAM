@@ -51,7 +51,7 @@ public class CameraMove : MonoBehaviour
             data.SetStageMoveFlag(changeStartFlag);
             if(audioSourse != null)
             {
-                audioSourse.volume = 0.2f;
+                audioSourse.volume = 0.8f;
                 audioSourse.PlayOneShot(kaitenSE);
             }
         }
