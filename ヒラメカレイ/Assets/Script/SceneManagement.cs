@@ -30,8 +30,8 @@ public class SceneManagement : MonoBehaviour
     
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         Application.targetFrameRate = 60;
         sceneName = SceneManager.GetActiveScene().name;
 
@@ -67,7 +67,7 @@ public class SceneManagement : MonoBehaviour
         }
         else if (sceneName == SceneNames.GameScene.ToString())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) || data.GetClearFlag()  )
+            if ( data.GetClearFlag()  )
             {
                 if(!oneFlag) fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.ClearScene.ToString());
 
@@ -78,9 +78,9 @@ public class SceneManagement : MonoBehaviour
                 oneFlag = true;
 
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) || data.GetIsDeadFlag())
+            else if ( data.GetIsDeadFlag())
             {
-                //if (!oneFlag) fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString(),2.5f);
+                if (!oneFlag) fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.GameOverScene.ToString(),2.5f);
                 if (audioSource != null)
                 {
                     audioSource.Stop();
@@ -90,17 +90,17 @@ public class SceneManagement : MonoBehaviour
         }
         else if (sceneName == SceneNames.ClearScene.ToString())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.TitleScene.ToString());
-            }
+            //if (Input.GetKeyDown(KeyCode.Alpha1))
+            //{
+            //    fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.TitleScene.ToString());
+            //}
         }
         else if (sceneName == SceneNames.GameOverScene.ToString())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.TitleScene.ToString());
-            }
+            //if (Input.GetKeyDown(KeyCode.Alpha1))
+            //{
+            //    fade.GetComponent<FadeStart>().FadeOutNextScene(SceneNames.TitleScene.ToString());
+            //}
         }
     }
 

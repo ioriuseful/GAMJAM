@@ -9,7 +9,7 @@ public class NetControl : MonoBehaviour
     GameObject target;
     private GameObject gameManager;
     private Data data;
-    float speedDeltatime = 40.0f;
+    float speedDeltatime = 30.0f;
 
     private PlayerControl playerControl;
     // Start is called before the first frame update

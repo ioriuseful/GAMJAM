@@ -144,6 +144,7 @@ public class PlayerControl : MonoBehaviour
     public void UPScore()
     {
         score++;
+        sound.PlayOneShot(eat);
     }
     private void OnTriggerEnter(Collider collider)
     {
@@ -151,13 +152,13 @@ public class PlayerControl : MonoBehaviour
         {
             clearFlag = true;
         }
-        if (collider.transform.tag == "kozakana" && !netHitFlag)
+        if (collider.transform.tag == "kozakana")
         {
 
             if (eat != null && state != State.Karei)
             {
                 //score++;
-                sound.PlayOneShot(eat);
+                //sound.PlayOneShot(eat);
                // Destroy(collider.gameObject);
                 
             }
@@ -171,7 +172,7 @@ public class PlayerControl : MonoBehaviour
                 sound.PlayOneShot(netHit);
             }
         }
-        if (collider.transform.tag == "Enemy" && !netHitFlag)
+        if (collider.transform.tag == "Enemy" )
         {
             Damage(10);
             if (dead != null)
@@ -210,10 +211,10 @@ public class PlayerControl : MonoBehaviour
         {
             velocity.x = -0.05f;
         }
-       else if (Input.GetKey(KeyCode.D) && state == State.Hirame)
-        {
-            velocity.x = 0.1f;
-        }
+       //else if (Input.GetKey(KeyCode.D) && state == State.Hirame)
+       // {
+       //     velocity.x = 0.1f;
+       // }
 
         if (Input.GetKey(KeyCode.DownArrow) && air) 
         {
