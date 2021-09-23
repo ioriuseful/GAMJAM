@@ -1739,6 +1739,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManagerOBJ
       objectReference: {fileID: 0}
+    - target: {fileID: 4737823840537584783, guid: e8f1fa5e073c00a499d8589270bbf4ad,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8080519920518096552, guid: e8f1fa5e073c00a499d8589270bbf4ad,
         type: 3}
       propertyPath: m_RootOrder
